@@ -1,0 +1,21 @@
+[role=contentinfo] {
+	@extend .clearfix;
+	clear: both;
+	background: $color__red;
+	background-size: cover;
+	padding: 5 + $ratio#{em} 0;
+	a,small {
+		color: $color__white;
+		text-decoration: none;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+small {
+	padding: 5em 0;
+	display: block;
+	margin: auto;
+	text-align: center;
+}

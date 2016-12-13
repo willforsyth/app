@@ -1,0 +1,156 @@
+// Group sets of form fields in a list.
+.form-fields{
+    list-style:none;
+    margin:0;
+}
+.form-fields > li{
+    margin-bottom: $ratio#{em};
+}
+.form-fields > li:last-child{
+    margin-bottom:0;
+}
+
+
+// Basic styles on inputs.
+
+%input{
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    padding: $ratio--inv#{em};
+    background-color: $color__white;
+    color: $color__black;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+
+    &:focus{
+        border-color: $color__black;
+        outline: none;
+    }
+
+    .error &{
+        background-color: $color__red;
+        color: $color__white;
+
+        &:focus{
+            background-color: $color__white;
+            color: $color__black;
+            border-color: $color__red;
+        }
+    }
+
+    .success &{
+        background-color: $color__green;
+        border-color: $color__green;
+        color: $color__white;
+
+        &:focus{
+            background-color: $color__white;
+            color: $color__black;
+            border-color: $color__green;
+        }
+    }
+
+    &[disabled]{
+        background: $color__gray;
+        color: $color__white;
+        cursor: not-allowed;
+    }
+}
+
+.filterSection {
+    @extend .clearfix;
+    margin-top: 3em;
+    display: none;
+    li {
+      float: left;
+      margin-right: 0.5em;
+    }
+    @include breakpoint(medium){
+        display: block;
+    }
+}
+.blog--filter {
+    float: left;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+textarea,
+select{
+    @extend %input;
+}
+
+textarea{
+    resize: vertical;
+}
+
+select{
+    cursor: pointer;
+}
+
+.error{
+    .message{
+        margin: $ratio--inv#{em} 0;
+        color: $color__red;
+        fill: $color__red;
+    }
+}
+
+.success{
+    .message{
+        margin: $ratio--inv#{em} 0;
+        color: $color__green;
+        fill: $color__green;
+    }
+}
+
+// Styles for the Checkboxes and the radios
+
+input[type="checkbox"],
+input[type="radio"]{
+    display: none;
+
+    & ~ span {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-color: none;
+        border: 1px solid $color__white;
+        margin-left: $ratio--inv#{em};
+        margin-left: -3em;
+    }
+
+    & ~ label{
+        position: relative;
+        cursor: pointer;
+        padding-right: 4em;
+        font-family: $body-font;
+    }
+
+    &:checked{
+        & ~ span{
+            border: 1px solid $color__blue;
+            background: $color__blue;
+        }
+    }
+}
+
+input[type="radio"]{
+    & ~ span{
+        border-radius: 100%;
+    }
+}
+
+// Optional class to add to form to create optional content
+
+.optional{
+    label:after{
+        content: " (optional)";
+    }
+}
