@@ -5,7 +5,7 @@ import {HomePage} from './components/home/HomePage';
 import {ArtPage} from './components/art/ArtPage';
 import {SneakersPage} from './components/sneakers/SneakersPage';
 import {HowItWorks} from './components/about/HowItWorks';
-import {AccountPage} from './components/login/AccountPage';
+import AccountCont from './components/account/AccountContainer';
 
 export default(
   <Route path="/" component={App}>
@@ -13,6 +13,6 @@ export default(
     <Route path="art" component={ArtPage} />
     <Route path="sneakers" component={SneakersPage} />
     <Route path="about" component={HowItWorks} />
-      <Route path="account" component={AccountPage} />
+      <Route path="account" component={AccountCont} />
   </Route>
 );

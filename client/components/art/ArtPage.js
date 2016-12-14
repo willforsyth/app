@@ -7,7 +7,6 @@ const ArtPage = () => {
         <p>Some about shit</p>
       </div>
     );
-
 }
 
 export {ArtPage};
