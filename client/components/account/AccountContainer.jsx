@@ -11,6 +11,7 @@ class AccountCont extends Component {
       <AccountPage key={name._id} name={name} />
     ));
   }
+
   render(){
       let newUsers = this.renderUserList();
       console.log(newUsers);
@@ -27,30 +28,3 @@ export default createContainer(() => {
     users: UserList.find({}).fetch(),
   };
 }, AccountCont);
-
-// class AccountCont extends React.Component {
-//   constructor(props, context){
-//     super(props, context);
-//
-//     this.state = {
-//       course: {title: ""}
-//     };
-//   }
-//
-//   getUsers() {
-// 		return UserList.find({ name: "David" }).fetch();
-// 	}
-//
-//   // let users = UserList.find().fetch();
-//   // console.log(users.id);
-//
-//   render(){
-//     let users = this.getUsers();
-//     return(
-//         <AccountPage name='William' />
-//     );
-//   }
-// }
-//
-//
-// export {AccountCont};
