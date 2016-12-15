@@ -1,13 +1,13 @@
 import { Meteor } from 'meteor/meteor';
 import React, {PropTypes} from 'react';
-import {Header} from './common/header';
+import {HeaderContainer} from './common/headerContainer';
 import {Footer} from './common/footer';
 
 class App extends React.Component {
   render(){
     return(
       <div className="container-fluid">
-        <Header />
+        <HeaderContainer />
           {this.props.children}
         <Footer />
       </div>
