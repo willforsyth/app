@@ -130,7 +130,6 @@ input[type="radio"]{
         position: relative;
         cursor: pointer;
         padding-right: 4em;
-        font-family: $body-font;
     }
 
     &:checked{
@@ -153,4 +152,24 @@ input[type="radio"]{
     label:after{
         content: " (optional)";
     }
+}
+
+.editForm{
+  input,
+    label{
+      width: 10%;
+      margin-bottom: .6em;
+    }
+
+    input {
+        &[readOnly]{
+          border: none;
+        }
+    }
+}
+
+.readonly{
+  [type=submit] {
+    display: none;
+  }
 }
