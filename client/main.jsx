@@ -18,13 +18,12 @@ Meteor.startup(() => {
 
 Template.body.events({
 	'submit .new-profile': function(event) {
-    let get = event.target;
-    let firstName = get.FirstName.value;
+    let get = event.target,
+        firstName = get.FirstName.value,
+        surname = get.surname.value,
+        email = get.email.value
 		// Update the user collection with the form data.
-		Meteor.call('updateProfile', firstName);
-
-		// Reset the form inputs to empty.
-		get.text.value = '';
+		Meteor.call('updateProfile', firstName, surname, email);
 
 		// Stop the page from refreshing.
 		event.preventDefault();

@@ -23,9 +23,12 @@ class AccountCont extends Component {
 
   updateData(event){
     event.preventDefault()
-    let get = event.target;
-    let firstName = get.FirstName.value;
-    Meteor.call('updateProfile', firstName);
+    let get = event.target,
+        firstName = get.FirstName.value,
+        surname = get.surname.value,
+        email = get.email.value;
+
+    Meteor.call('updateProfile', firstName, surname, email);
     console.log(get);
   }
 

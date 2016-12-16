@@ -11,9 +11,9 @@ const AccountPage = (props) => {
           <label>First Name: </label>
           <input name="FirstName" type="text" defaultValue={props.user.profile.firstName} readOnly />
            <label>Last Name: </label>
-          <input type="text" defaultValue={props.user.profile.surname} readOnly />
+          <input name="surname" type="text" defaultValue={props.user.profile.surname} readOnly />
               <label>Email: </label>
-          <input type="email" defaultValue={props.user.profile.email} readOnly />
+          <input name="email" type="email" defaultValue={props.user.profile.email} readOnly />
               <label>Website: </label>
           <input type="text" defaultValue="willforsyth.io" readOnly />
             <input type="submit" />
