@@ -65,6 +65,6 @@ class AccountCont extends Component {
 
 export default createContainer(() => {
   return {
-    users: AccountList.find({}).fetch(),
+    users: Meteor.users.find({}).fetch(),
   };
 }, AccountCont);

@@ -18,8 +18,8 @@ Meteor.startup(() => {
 
 Template.body.events({
 	'submit .new-profile': function(event) {
-    let get = event.target,
-        firstName = get.FirstName.value;
+    let get = event.target;
+    let firstName = get.FirstName.value;
 		// Update the user collection with the form data.
 		Meteor.call('updateProfile', firstName);
 

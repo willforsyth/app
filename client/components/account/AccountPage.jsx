@@ -4,28 +4,16 @@ const AccountPage = (props) => {
   console.log(Meteor.userId())
   console.log(props)
 
-  // updateData = (e) => {
-  //   e.preventDafault()
-  //   console.log('submit');
-  //   let currentUserId = Meteor.userId();
-  //   var get = event.target;
-	// 	var firstName = get.FirstName.value;
-	// 	var surname = get.secondName.value;
-  //
-	// 	// Update the user collection with the form data.
-	// 	// Meteor.call('updateProfile', firstName, surname, team, role, item, notification);
-  // }
-
-
     return(
       <div>
         <form action="" onSubmit={props.updateData} className="readonly editForm">
+          <h2>Hi {props.user.username}</h2>
           <label>First Name: </label>
-          <input name="FirstName" type="text" defaultValue={props.user.FirstName} readOnly />
+          <input name="FirstName" type="text" defaultValue={props.user.profile.firstName} readOnly />
            <label>Last Name: </label>
-          <input type="text" defaultValue={props.user.secondName} readOnly />
+          <input type="text" defaultValue={props.user.profile.surname} readOnly />
               <label>Email: </label>
-          <input type="email" defaultValue={props.user.email} readOnly />
+          <input type="email" defaultValue={props.user.profile.email} readOnly />
               <label>Website: </label>
           <input type="text" defaultValue="willforsyth.io" readOnly />
             <input type="submit" />
