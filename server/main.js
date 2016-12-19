@@ -30,6 +30,11 @@ Accounts.onCreateUser(function(options, user) {
     "firstname": '',
     "surname": '',
     "email": ''
+  },
+  user.items = options.item ? options.item : {
+    "title": '',
+    "category": '',
+    "desctiption": ''
   };
   return user;
 })

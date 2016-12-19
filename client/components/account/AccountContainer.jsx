@@ -17,8 +17,6 @@ class AccountCont extends Component {
       input.forEach(inputs => inputs.readOnly = false);
       input.forEach(inputs => inputs.removeAttribute('readOnly'));
       readOnly.classList.remove('readonly');
-      // var firstName = ReactDOM.findDOMNode(this.refs.FirstName).value();
-      // var surname = readOnly.refs.secondName;
     }
 
   updateData(event){
@@ -32,7 +30,7 @@ class AccountCont extends Component {
         readOnly = document.querySelector('.editForm');
     input.forEach(inputs => inputs.readOnly = true);
     readOnly.classList.add('readonly');
-
+    console.log(Meteor.userId());
     Meteor.call('updateProfile', firstName, surname, email);
     console.log(get);
   }
@@ -51,6 +49,8 @@ class AccountCont extends Component {
       );
     }
 }
+
+// export default AccountCont;
 
 export default createContainer(() => {
   return {
