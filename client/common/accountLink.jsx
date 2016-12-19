@@ -3,8 +3,9 @@ import {Link, IndexLink} from 'react-router';
 
 const AccountLink = () => {
    return (
-       <nav>
-          <IndexLink to="account" activeClassName="active">Account</IndexLink>
+       <nav className="nav nav--account">
+          <Link to="account" activeClassName="active">Account</Link>
+          <Link to="/my-items" activeClassName="active">My items</Link>
        </nav>
    );
 };

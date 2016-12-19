@@ -10,6 +10,7 @@ import './components/account/accounts-config.js';
 
 // Create a session for the user.
 Session.set('userSession', Meteor.userId());
+Meteor.subscribe('userData');
 
 Meteor.startup(() => {
   render(<Router history={browserHistory} routes={routes}/>, document.getElementById('render-target'));

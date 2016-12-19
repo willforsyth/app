@@ -6,13 +6,14 @@ import {ArtPage} from './components/art/ArtPage';
 import {SneakersPage} from './components/sneakers/SneakersPage';
 import {HowItWorks} from './components/about/HowItWorks';
 import AccountCont from './components/account/AccountContainer';
+import ItemsContainer from './components/account/items/ItemsContainer';
 
 export default(
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
-    <Route path="art" component={ArtPage} />
-    <Route path="sneakers" component={SneakersPage} />
-    <Route path="about" component={HowItWorks} />
-      <Route path="account" component={AccountCont} />
+    <Route path="/sneakers" component={SneakersPage} />
+    <Route path="/how-it-works" component={HowItWorks} />
+    <Route path="/account" component={AccountCont} />
+    <Route path="/my-items" component={ItemsContainer} />
   </Route>
 );

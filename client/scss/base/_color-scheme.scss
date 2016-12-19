@@ -10,11 +10,11 @@ $color__white: #fff;
 }
 
 //example of colors and there usage
-$color__blue: #00ab90;
+$color__blue: #49c7e8;
 $color__blue--light: lighten($color__blue, 20%);
 $color__blue--dark: darken($color__blue, 20%);
 
-$color__red: #f06a6b;
+$color__red: #650d0f;
 $color__red--light: lighten($color__red, 20%);
 $color__red--dark: darken($color__red, 20%);
 
@@ -22,9 +22,9 @@ $color__green: #5dc2a7;
 $color__green--light: lighten($color__green, 20%);
 $color__green--dark: darken($color__green, 20%);
 
-$color__purple: #8e44ad;
-$color__purple--light: lighten($color__purple, 20%);
-$color__purple--dark: darken($color__purple, 20%);
+$color__pink: #ef3849;
+$color__pink--light: lighten($color__pink, 20%);
+$color__pink--dark: darken($color__pink, 20%);
 
 
 // Brand Colors

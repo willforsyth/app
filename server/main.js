@@ -46,3 +46,7 @@ Meteor.publish("userData", function () {
     this.ready();
   }
 });
+
+// Meteor.publish('usersItems', function(){
+//     return users.find();
+// });

@@ -2,9 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import {AccountPage} from './AccountPage';
 import { createContainer } from 'meteor/react-meteor-data';
-import { AccountList } from '../../../api/dataContainer';
-import {HomePage} from './../home/HomePage';
-
 
 // App component - represents the whole app
 class AccountCont extends Component {

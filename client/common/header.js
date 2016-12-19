@@ -7,11 +7,9 @@ const Header = () => {
         <IndexLink to="/" activeClassName="active">Logo</IndexLink>
         <AccountsUIWrapper />
        <nav>
-         <IndexLink to="art" activeClassName="active">Art</IndexLink>
+         <Link to="sneakers" activeClassName="active">Sneakers</Link>
          {" | "}
-         <IndexLink to="sneakers" activeClassName="active">Sneakers</IndexLink>
-         {" | "}
-         <Link to="about" activeClassName="active">How it works</Link>
+         <Link to="how-it-works" activeClassName="active">How it works</Link>
        </nav>
      </header>
    );
