@@ -1,8 +1,14 @@
 .nav--account {
   float: right;
+  clear: both;
   a {
     margin-left: 1em;
-    display: block;
+    display: inline-block;
     clear: both;
   }
+}
+
+.nav-main {
+  display: inline-block;
+    float: right;
 }

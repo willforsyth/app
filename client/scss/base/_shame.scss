@@ -1,4 +1,15 @@
 #login-buttons {
   float: right;
   margin-right: 5em;
+  line-height: 1.6;
+}
+
+.edit {
+  position: absolute;
+top: 0;
+right: 0;
+}
+
+* {
+  box-sizing: border-box;
 }

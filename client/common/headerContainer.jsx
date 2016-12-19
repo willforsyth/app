@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import {Header} from './header';
-import {AccountLink} from './accountLink';
 
 class HeaderContainer extends Component {
   render(){
@@ -10,7 +9,6 @@ class HeaderContainer extends Component {
       return (
           <div>
               <Header />
-              <AccountLink />
             </div>
           );
     }

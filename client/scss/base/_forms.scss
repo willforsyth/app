@@ -16,7 +16,6 @@
 %input{
     font-size: 1em;
     display: block;
-    width: 100%;
     padding: $ratio--inv#{em};
     background-color: $color__white;
     color: $color__black;
@@ -155,6 +154,7 @@ input[type="radio"]{
 }
 
 .editForm{
+  position: relative;
   width: 50%;
   margin: auto;
   input {
@@ -166,10 +166,10 @@ input[type="radio"]{
   }
   input,
     label{
-      width: 100%;
       margin-bottom: .6em;
       font-family: $body-font;
       padding-left: 0;
+      display: inline-block;
     }
 
     input {
@@ -177,6 +177,9 @@ input[type="radio"]{
           border: none;
         }
     }
+}
+.editForm--item {
+  clear: both;
 }
 
 .readonly{
