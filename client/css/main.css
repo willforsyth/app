@@ -353,6 +353,40 @@
   font-size: 1.3em;
 }
 
+/* line 10, ../scss/base/_typography.scss */
+html {
+  font-family: "Lato", sans-serif;
+  line-height: 1.61803em;
+  font-size: 18px;
+  font-weight: 300;
+  direction: ltr;
+  display: block;
+  unicode-bidi: embed;
+  -webkit-locale: en-UK;
+}
+
+@media (min-width: 38em) {
+  /* line 21, ../scss/base/_typography.scss */
+  body {
+    font-size: 0.88889em;
+    line-height: 1.61803em;
+  }
+}
+@media (min-width: 52em) {
+  /* line 21, ../scss/base/_typography.scss */
+  body {
+    font-size: 1.11111em;
+    line-height: 1.61803em;
+  }
+}
+@media (min-width: 72em) {
+  /* line 21, ../scss/base/_typography.scss */
+  body {
+    font-size: 1.66667em;
+    line-height: 1.61803em;
+  }
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -696,18 +730,32 @@ input[type="radio"] ~ span {
   content: " (optional)";
 }
 
-/* line 158, ../scss/base/_forms.scss */
+/* line 157, ../scss/base/_forms.scss */
+.editForm {
+  width: 50%;
+  margin: auto;
+}
+/* line 160, ../scss/base/_forms.scss */
+.editForm input {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid;
+}
+/* line 166, ../scss/base/_forms.scss */
 .editForm input,
 .editForm label {
-  width: 10%;
+  width: 100%;
   margin-bottom: .6em;
+  font-family: "Lato", sans-serif;
+  padding-left: 0;
 }
-/* line 165, ../scss/base/_forms.scss */
+/* line 175, ../scss/base/_forms.scss */
 .editForm input[readOnly] {
   border: none;
 }
 
-/* line 172, ../scss/base/_forms.scss */
+/* line 182, ../scss/base/_forms.scss */
 .readonly [type=submit] {
   display: none;
 }

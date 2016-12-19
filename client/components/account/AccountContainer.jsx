@@ -11,9 +11,9 @@ class AccountCont extends Component {
 
   handleClick(e) {
       e.preventDefault();
-      let edit = document.querySelector('.edit');
-      let input = document.querySelectorAll('input');
-      let readOnly = document.querySelector('.readonly');
+      let edit = document.querySelector('.edit'),
+          input = document.querySelectorAll('input'),
+          readOnly = document.querySelector('.readonly');
       input.forEach(inputs => inputs.readOnly = false);
       input.forEach(inputs => inputs.removeAttribute('readOnly'));
       readOnly.classList.remove('readonly');
@@ -23,10 +23,15 @@ class AccountCont extends Component {
 
   updateData(event){
     event.preventDefault()
-    let get = event.target,
+    let get = event.target;
         firstName = get.FirstName.value,
         surname = get.surname.value,
         email = get.email.value;
+        edit = document.querySelector('.edit'),
+        input = document.querySelectorAll('input'),
+        readOnly = document.querySelector('.editForm');
+    input.forEach(inputs => inputs.readOnly = true);
+    readOnly.classList.add('readonly');
 
     Meteor.call('updateProfile', firstName, surname, email);
     console.log(get);
@@ -38,26 +43,7 @@ class AccountCont extends Component {
     ));
   }
 
-  // editForm(){
-  //   let edit = document.querySelector('.edit');
-  //   console.log(edit);
-  // }
-
   render(){
-
-      // let userName = Meteor.users.find({_id:Meteor.userId()}).fetch();
-      // let currentUserId = Meteor.userId();
-      // console.log(currentUserId + " " + "s");
-      // var get = event.target;
-  		// var firstName = get.firstName.value;
-  		// var surname = get.surname.value;
-  		// var team = get.team.value;
-  		// var role = get.role.value;
-  		// var department = get.department.value;
-
-  		// Update the user collection with the form data.
-
-
       return(
           <div className="cont">
             {this.renderUserList()}

@@ -155,10 +155,20 @@ input[type="radio"]{
 }
 
 .editForm{
+  width: 50%;
+  margin: auto;
+  input {
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid;
+  }
   input,
     label{
-      width: 10%;
+      width: 100%;
       margin-bottom: .6em;
+      font-family: $body-font;
+      padding-left: 0;
     }
 
     input {
