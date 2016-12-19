@@ -830,6 +830,11 @@ table {
   border-spacing: 0;
 }
 
+/* line 1, ../scss/base/_shame.scss */
+#login-buttons {
+  float: right;
+}
+
 /* line 10, ../scss/base/_typography.scss */
 html {
   font-family: "Lato", sans-serif;
