@@ -4,11 +4,11 @@ const ItemsPage = (props) => {
  console.log(props.user.items)
  return(
    <main>
-     <div>
+     <section>
        <h2>Item title: {props.user.items.title}</h2>
        <p>Category: {props.user.items.category}</p>
        <p>Description: {props.user.items.description}</p>
-     </div>
+     </section>
      <div>
        <form action="" className="readonly editForm">
          <h2>Post sneaker</h2>

@@ -5,10 +5,15 @@
     margin-left: 1em;
     display: inline-block;
     clear: both;
+    color: $color__white;
   }
 }
 
 .nav-main {
   display: inline-block;
-    float: right;
+  float: right;
+  a {
+    margin-left: 1em;
+    color: $color__white;
+  }
 }

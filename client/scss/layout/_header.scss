@@ -1,3 +1,13 @@
 header {
-  margin-bottom: 6em;
+  padding-bottom: 4em;
+  border-bottom: 1px solid;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  width: 10%;
+  top: 0;
+  border-right: 1px solid;
 }

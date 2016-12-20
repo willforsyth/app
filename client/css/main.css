@@ -1,3 +1,538 @@
+/* line 8, ../scss/base/_color-scheme.scss */
+.white {
+  color: #fff;
+}
+
+/* line 10, ../scss/base/_typography.scss */
+html {
+  font-family: "Lato", sans-serif;
+  line-height: 1.61803em;
+  font-size: 16px;
+  font-weight: 300;
+  direction: ltr;
+  display: block;
+  color: #ffffff;
+  unicode-bidi: embed;
+  -webkit-locale: en-UK;
+}
+
+@media (min-width: 38em) {
+  /* line 22, ../scss/base/_typography.scss */
+  body {
+    font-size: 0.875em;
+    line-height: 1.61803em;
+  }
+}
+@media (min-width: 52em) {
+  /* line 22, ../scss/base/_typography.scss */
+  body {
+    font-size: 1.125em;
+    line-height: 1.61803em;
+  }
+}
+@media (min-width: 72em) {
+  /* line 22, ../scss/base/_typography.scss */
+  body {
+    font-size: 1.375em;
+    line-height: 1.61803em;
+  }
+}
+
+/* line 1, ../scss/base/_common.scss */
+body {
+  background: #505050;
+}
+
+/* line 5, ../scss/base/_common.scss */
+main {
+  padding-left: 10%;
+}
+
+/* line 1, ../scss/base/_footer.scss */
+[role=contentinfo] {
+  clear: both;
+  background: #650d0f;
+  background-size: cover;
+  padding: 6.61803em 0;
+}
+/* line 7, ../scss/base/_footer.scss */
+[role=contentinfo] a, [role=contentinfo] small {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 10, ../scss/base/_footer.scss */
+[role=contentinfo] a:hover, [role=contentinfo] small:hover {
+  opacity: 0.8;
+}
+
+/* line 16, ../scss/base/_footer.scss */
+small {
+  padding: 5em 0;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 2, ../scss/base/_forms.scss */
+.form-fields {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 6, ../scss/base/_forms.scss */
+.form-fields > li {
+  margin-bottom: 1.61803em;
+}
+
+/* line 9, ../scss/base/_forms.scss */
+.form-fields > li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 16, ../scss/base/_forms.scss */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='url'],
+textarea,
+select {
+  font-size: 1em;
+  display: block;
+  padding: 0.61803em;
+  background-color: #fff;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+/* line 25, ../scss/base/_forms.scss */
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+textarea:focus,
+select:focus {
+  border-color: #313131;
+  outline: none;
+}
+/* line 30, ../scss/base/_forms.scss */
+.error input[type='text'],
+.error input[type='email'],
+.error input[type='password'],
+.error input[type='number'],
+.error input[type='search'],
+.error input[type='tel'],
+.error input[type='url'],
+.error textarea,
+.error select {
+  background-color: #650d0f;
+  color: #fff;
+}
+/* line 34, ../scss/base/_forms.scss */
+.error input[type='text']:focus,
+.error input[type='email']:focus,
+.error input[type='password']:focus,
+.error input[type='number']:focus,
+.error input[type='search']:focus,
+.error input[type='tel']:focus,
+.error input[type='url']:focus,
+.error textarea:focus,
+.error select:focus {
+  background-color: #fff;
+  color: #313131;
+  border-color: #650d0f;
+}
+/* line 41, ../scss/base/_forms.scss */
+.success input[type='text'],
+.success input[type='email'],
+.success input[type='password'],
+.success input[type='number'],
+.success input[type='search'],
+.success input[type='tel'],
+.success input[type='url'],
+.success textarea,
+.success select {
+  background-color: #5dc2a7;
+  border-color: #5dc2a7;
+  color: #fff;
+}
+/* line 46, ../scss/base/_forms.scss */
+.success input[type='text']:focus,
+.success input[type='email']:focus,
+.success input[type='password']:focus,
+.success input[type='number']:focus,
+.success input[type='search']:focus,
+.success input[type='tel']:focus,
+.success input[type='url']:focus,
+.success textarea:focus,
+.success select:focus {
+  background-color: #fff;
+  color: #313131;
+  border-color: #5dc2a7;
+}
+/* line 53, ../scss/base/_forms.scss */
+input[disabled][type='text'],
+input[disabled][type='email'],
+input[disabled][type='password'],
+input[disabled][type='number'],
+input[disabled][type='search'],
+input[disabled][type='tel'],
+input[disabled][type='url'],
+textarea[disabled],
+select[disabled] {
+  background: #505050;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* line 60, ../scss/base/_forms.scss */
+.filterSection {
+  margin-top: 3em;
+  display: none;
+}
+/* line 64, ../scss/base/_forms.scss */
+.filterSection li {
+  float: left;
+  margin-right: 0.5em;
+}
+@media (min-width: 52em) {
+  /* line 60, ../scss/base/_forms.scss */
+  .filterSection {
+    display: block;
+  }
+}
+
+/* line 72, ../scss/base/_forms.scss */
+.blog--filter {
+  float: left;
+}
+
+/* line 88, ../scss/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 92, ../scss/base/_forms.scss */
+select {
+  cursor: pointer;
+}
+
+/* line 97, ../scss/base/_forms.scss */
+.error .message {
+  margin: 0.61803em 0;
+  color: #650d0f;
+  fill: #650d0f;
+}
+
+/* line 105, ../scss/base/_forms.scss */
+.success .message {
+  margin: 0.61803em 0;
+  color: #5dc2a7;
+  fill: #5dc2a7;
+}
+
+/* line 114, ../scss/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+/* line 118, ../scss/base/_forms.scss */
+input[type="checkbox"] ~ span,
+input[type="radio"] ~ span {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: none;
+  border: 1px solid #fff;
+  margin-left: 0.61803em;
+  margin-left: -3em;
+}
+/* line 128, ../scss/base/_forms.scss */
+input[type="checkbox"] ~ label,
+input[type="radio"] ~ label {
+  position: relative;
+  cursor: pointer;
+  padding-right: 4em;
+}
+/* line 135, ../scss/base/_forms.scss */
+input[type="checkbox"]:checked ~ span,
+input[type="radio"]:checked ~ span {
+  border: 1px solid #49c7e8;
+  background: #49c7e8;
+}
+
+/* line 143, ../scss/base/_forms.scss */
+input[type="radio"] ~ span {
+  border-radius: 100%;
+}
+
+/* line 151, ../scss/base/_forms.scss */
+.optional label:after {
+  content: " (optional)";
+}
+
+/* line 156, ../scss/base/_forms.scss */
+.editForm {
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+/* line 160, ../scss/base/_forms.scss */
+.editForm input {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 3px solid #ffffff;
+  background: none;
+}
+/* line 167, ../scss/base/_forms.scss */
+.editForm input,
+.editForm label {
+  margin-bottom: .6em;
+  font-family: "Lato", sans-serif;
+  padding-left: 0;
+  display: inline-block;
+}
+/* line 176, ../scss/base/_forms.scss */
+.editForm input[readOnly] {
+  border: none;
+}
+
+/* line 181, ../scss/base/_forms.scss */
+.editForm--item {
+  clear: both;
+}
+
+/* line 186, ../scss/base/_forms.scss */
+.readonly [type=submit] {
+  display: none;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../scss/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 27, ../scss/base/_reset.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 30, ../scss/base/_reset.scss */
+fieldset {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border-color: transparent;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 39, ../scss/base/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 43, ../scss/base/_reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 46, ../scss/base/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 49, ../scss/base/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 54, ../scss/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../scss/base/_shame.scss */
+#login-buttons {
+  margin-right: 1em;
+  line-height: 1.6;
+}
+
+/* line 6, ../scss/base/_shame.scss */
+.edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 12, ../scss/base/_shame.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 1, ../scss/layout/_header.scss */
+header {
+  padding-bottom: 4em;
+  border-bottom: 1px solid;
+}
+
+/* line 6, ../scss/layout/_header.scss */
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  width: 10%;
+  top: 0;
+  border-right: 1px solid;
+}
+
+/* line 1, ../scss/base/_buttons.scss */
+.button,
+button, .button--alt, input[type="submit"] {
+  background-color: #49c7e8;
+  color: #fff !important;
+  border: 4px solid #49c7e8;
+  cursor: pointer;
+  display: inline-block;
+  fill: #fff;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0.61803em 0;
+  padding: 0.61803em 1.61803em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-appearance: none;
+}
+/* line 20, ../scss/base/_buttons.scss */
+.button:visited,
+button:visited, .button--alt:visited, input[type="submit"]:visited {
+  color: #fff;
+  fill: #fff;
+}
+/* line 25, ../scss/base/_buttons.scss */
+.button:hover,
+button:hover, .button--alt:hover, input[type="submit"]:hover, .button:focus,
+button:focus, .button--alt:focus, input[type="submit"]:focus, .zeroclipboard-is-hover.button,
+button.zeroclipboard-is-hover, .zeroclipboard-is-hover.button--alt, input.zeroclipboard-is-hover[type="submit"] {
+  background: #49c7e8;
+  border: 0.1459em solid #49c7e8;
+  color: #fff;
+  fill: #fff;
+  outline: none;
+}
+/* line 35, ../scss/base/_buttons.scss */
+.button--disabled.button,
+button.button--disabled, .button--disabled.button--alt, input.button--disabled[type="submit"], .button:disabled,
+button:disabled, .button--alt:disabled, input[type="submit"]:disabled, [disabled].button,
+button[disabled], [disabled].button--alt, input[disabled][type="submit"] {
+  background-color: #505050 !important;
+  border-color: #505050 !important;
+  color: #fff !important;
+  cursor: not-allowed;
+  fill: #fff !important;
+}
+/* line 45, ../scss/base/_buttons.scss */
+.button svg,
+button svg, .button--alt svg, input[type="submit"] svg {
+  margin-bottom: -0.61803em;
+  margin-top: -0.61803em;
+}
+
+/* line 51, ../scss/base/_buttons.scss */
+.button--inline {
+  display: inline-block;
+}
+
+/* line 55, ../scss/base/_buttons.scss */
+.button,
+button {
+  margin-right: 0.61803em;
+}
+
+/* line 61, ../scss/base/_buttons.scss */
+.button--auto-width, .button--alt {
+  width: auto;
+}
+
+/* line 65, ../scss/base/_buttons.scss */
+.button--alt {
+  background-color: #ef3849 !important;
+  border: 3px solid #fff;
+}
+
+/* line 76, ../scss/base/_buttons.scss */
+input[type="submit"] {
+  margin: 0;
+  float: right;
+  width: auto;
+  -webkit-appearance: none;
+}
+
+/* line 84, ../scss/base/_buttons.scss */
+.button--active {
+  background-color: #5dc2a7;
+  border-color: #5dc2a7;
+}
+/* line 88, ../scss/base/_buttons.scss */
+.button--active:hover, .button--active:focus, .button--active.zeroclipboard-is-hover {
+  background: #a7decf;
+}
+
+/* line 95, ../scss/base/_buttons.scss */
+button {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 100, ../scss/base/_buttons.scss */
+.button--description__button {
+  display: inline;
+  margin-right: 0.61803em;
+}
+
+/* line 105, ../scss/base/_buttons.scss */
+.button--description__text {
+  display: inline;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0 !important;
+}
+
 /* line 1, ../scss/components/_nav.scss */
 .nav--account {
   float: right;
@@ -8,21 +543,27 @@
   margin-left: 1em;
   display: inline-block;
   clear: both;
+  color: #fff;
 }
 
-/* line 11, ../scss/components/_nav.scss */
+/* line 12, ../scss/components/_nav.scss */
 .nav-main {
   display: inline-block;
   float: right;
 }
+/* line 15, ../scss/components/_nav.scss */
+.nav-main a {
+  margin-left: 1em;
+  color: #fff;
+}
 
 /* line 5, ../scss/layout/_clearfix.scss */
-.clearfix:before, .grid:before, [role=contentinfo]:before, .filterSection:before, .clearfix:after, .grid:after, [role=contentinfo]:after, .filterSection:after {
+.clearfix:before, [role=contentinfo]:before, .filterSection:before, .grid:before, .clearfix:after, [role=contentinfo]:after, .filterSection:after, .grid:after {
   content: " ";
   display: table;
 }
 /* line 11, ../scss/layout/_clearfix.scss */
-.clearfix:after, .grid:after, [role=contentinfo]:after, .filterSection:after {
+.clearfix:after, [role=contentinfo]:after, .filterSection:after, .grid:after {
   clear: both;
 }
 
@@ -371,11 +912,6 @@
   font-size: 1.3em;
 }
 
-/* line 1, ../scss/base/_common.scss */
-body {
-  background: #ef3849;
-}
-
 /* line 1, ../scss/base/_links.scss */
 a {
   color: #000000;
@@ -523,522 +1059,4 @@ html {
 .grow-In {
   -webkit-animation-name: growIn;
   animation-name: growIn;
-}
-
-/* line 8, ../scss/base/_color-scheme.scss */
-.white {
-  color: #fff;
-}
-
-/* line 1, ../scss/base/_footer.scss */
-[role=contentinfo] {
-  clear: both;
-  background: #650d0f;
-  background-size: cover;
-  padding: 6.61803em 0;
-}
-/* line 7, ../scss/base/_footer.scss */
-[role=contentinfo] a, [role=contentinfo] small {
-  color: #fff;
-  text-decoration: none;
-}
-/* line 10, ../scss/base/_footer.scss */
-[role=contentinfo] a:hover, [role=contentinfo] small:hover {
-  opacity: 0.8;
-}
-
-/* line 16, ../scss/base/_footer.scss */
-small {
-  padding: 5em 0;
-  display: block;
-  margin: auto;
-  text-align: center;
-}
-
-/* line 2, ../scss/base/_forms.scss */
-.form-fields {
-  list-style: none;
-  margin: 0;
-}
-
-/* line 6, ../scss/base/_forms.scss */
-.form-fields > li {
-  margin-bottom: 1.61803em;
-}
-
-/* line 9, ../scss/base/_forms.scss */
-.form-fields > li:last-child {
-  margin-bottom: 0;
-}
-
-/* line 16, ../scss/base/_forms.scss */
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='number'],
-input[type='search'],
-input[type='tel'],
-input[type='url'],
-textarea,
-select {
-  font-size: 1em;
-  display: block;
-  padding: 0.61803em;
-  background-color: #fff;
-  color: #313131;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-}
-/* line 25, ../scss/base/_forms.scss */
-input[type='text']:focus,
-input[type='email']:focus,
-input[type='password']:focus,
-input[type='number']:focus,
-input[type='search']:focus,
-input[type='tel']:focus,
-input[type='url']:focus,
-textarea:focus,
-select:focus {
-  border-color: #313131;
-  outline: none;
-}
-/* line 30, ../scss/base/_forms.scss */
-.error input[type='text'],
-.error input[type='email'],
-.error input[type='password'],
-.error input[type='number'],
-.error input[type='search'],
-.error input[type='tel'],
-.error input[type='url'],
-.error textarea,
-.error select {
-  background-color: #650d0f;
-  color: #fff;
-}
-/* line 34, ../scss/base/_forms.scss */
-.error input[type='text']:focus,
-.error input[type='email']:focus,
-.error input[type='password']:focus,
-.error input[type='number']:focus,
-.error input[type='search']:focus,
-.error input[type='tel']:focus,
-.error input[type='url']:focus,
-.error textarea:focus,
-.error select:focus {
-  background-color: #fff;
-  color: #313131;
-  border-color: #650d0f;
-}
-/* line 41, ../scss/base/_forms.scss */
-.success input[type='text'],
-.success input[type='email'],
-.success input[type='password'],
-.success input[type='number'],
-.success input[type='search'],
-.success input[type='tel'],
-.success input[type='url'],
-.success textarea,
-.success select {
-  background-color: #5dc2a7;
-  border-color: #5dc2a7;
-  color: #fff;
-}
-/* line 46, ../scss/base/_forms.scss */
-.success input[type='text']:focus,
-.success input[type='email']:focus,
-.success input[type='password']:focus,
-.success input[type='number']:focus,
-.success input[type='search']:focus,
-.success input[type='tel']:focus,
-.success input[type='url']:focus,
-.success textarea:focus,
-.success select:focus {
-  background-color: #fff;
-  color: #313131;
-  border-color: #5dc2a7;
-}
-/* line 53, ../scss/base/_forms.scss */
-input[disabled][type='text'],
-input[disabled][type='email'],
-input[disabled][type='password'],
-input[disabled][type='number'],
-input[disabled][type='search'],
-input[disabled][type='tel'],
-input[disabled][type='url'],
-textarea[disabled],
-select[disabled] {
-  background: #505050;
-  color: #fff;
-  cursor: not-allowed;
-}
-
-/* line 60, ../scss/base/_forms.scss */
-.filterSection {
-  margin-top: 3em;
-  display: none;
-}
-/* line 64, ../scss/base/_forms.scss */
-.filterSection li {
-  float: left;
-  margin-right: 0.5em;
-}
-@media (min-width: 52em) {
-  /* line 60, ../scss/base/_forms.scss */
-  .filterSection {
-    display: block;
-  }
-}
-
-/* line 72, ../scss/base/_forms.scss */
-.blog--filter {
-  float: left;
-}
-
-/* line 88, ../scss/base/_forms.scss */
-textarea {
-  resize: vertical;
-}
-
-/* line 92, ../scss/base/_forms.scss */
-select {
-  cursor: pointer;
-}
-
-/* line 97, ../scss/base/_forms.scss */
-.error .message {
-  margin: 0.61803em 0;
-  color: #650d0f;
-  fill: #650d0f;
-}
-
-/* line 105, ../scss/base/_forms.scss */
-.success .message {
-  margin: 0.61803em 0;
-  color: #5dc2a7;
-  fill: #5dc2a7;
-}
-
-/* line 114, ../scss/base/_forms.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  display: none;
-}
-/* line 118, ../scss/base/_forms.scss */
-input[type="checkbox"] ~ span,
-input[type="radio"] ~ span {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-color: none;
-  border: 1px solid #fff;
-  margin-left: 0.61803em;
-  margin-left: -3em;
-}
-/* line 128, ../scss/base/_forms.scss */
-input[type="checkbox"] ~ label,
-input[type="radio"] ~ label {
-  position: relative;
-  cursor: pointer;
-  padding-right: 4em;
-}
-/* line 135, ../scss/base/_forms.scss */
-input[type="checkbox"]:checked ~ span,
-input[type="radio"]:checked ~ span {
-  border: 1px solid #49c7e8;
-  background: #49c7e8;
-}
-
-/* line 143, ../scss/base/_forms.scss */
-input[type="radio"] ~ span {
-  border-radius: 100%;
-}
-
-/* line 151, ../scss/base/_forms.scss */
-.optional label:after {
-  content: " (optional)";
-}
-
-/* line 156, ../scss/base/_forms.scss */
-.editForm {
-  position: relative;
-  width: 50%;
-  margin: auto;
-}
-/* line 160, ../scss/base/_forms.scss */
-.editForm input {
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 3px solid #ffffff;
-  background: none;
-}
-/* line 167, ../scss/base/_forms.scss */
-.editForm input,
-.editForm label {
-  margin-bottom: .6em;
-  font-family: "Lato", sans-serif;
-  padding-left: 0;
-  display: inline-block;
-}
-/* line 176, ../scss/base/_forms.scss */
-.editForm input[readOnly] {
-  border: none;
-}
-
-/* line 181, ../scss/base/_forms.scss */
-.editForm--item {
-  clear: both;
-}
-
-/* line 186, ../scss/base/_forms.scss */
-.readonly [type=submit] {
-  display: none;
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* line 6, ../scss/base/_reset.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* line 27, ../scss/base/_reset.scss */
-pre {
-  white-space: pre-wrap;
-}
-
-/* line 30, ../scss/base/_reset.scss */
-fieldset {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  border-color: transparent;
-}
-
-/* HTML5 display-role reset for older browsers */
-/* line 39, ../scss/base/_reset.scss */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-/* line 43, ../scss/base/_reset.scss */
-ul {
-  list-style: none;
-}
-
-/* line 46, ../scss/base/_reset.scss */
-blockquote, q {
-  quotes: none;
-}
-
-/* line 49, ../scss/base/_reset.scss */
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-/* line 54, ../scss/base/_reset.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 1, ../scss/base/_shame.scss */
-#login-buttons {
-  float: right;
-  margin-right: 5em;
-  line-height: 1.6;
-}
-
-/* line 7, ../scss/base/_shame.scss */
-.edit {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* line 13, ../scss/base/_shame.scss */
-* {
-  box-sizing: border-box;
-}
-
-/* line 10, ../scss/base/_typography.scss */
-html {
-  font-family: "Lato", sans-serif;
-  line-height: 1.61803em;
-  font-size: 16px;
-  font-weight: 300;
-  direction: ltr;
-  display: block;
-  color: #ffffff;
-  unicode-bidi: embed;
-  -webkit-locale: en-UK;
-}
-
-@media (min-width: 38em) {
-  /* line 22, ../scss/base/_typography.scss */
-  body {
-    font-size: 0.875em;
-    line-height: 1.61803em;
-  }
-}
-@media (min-width: 52em) {
-  /* line 22, ../scss/base/_typography.scss */
-  body {
-    font-size: 1.125em;
-    line-height: 1.61803em;
-  }
-}
-@media (min-width: 72em) {
-  /* line 22, ../scss/base/_typography.scss */
-  body {
-    font-size: 1.375em;
-    line-height: 1.61803em;
-  }
-}
-
-/* line 1, ../scss/layout/_header.scss */
-header {
-  margin-bottom: 6em;
-}
-
-/* line 1, ../scss/base/_buttons.scss */
-.button,
-button, .button--alt, input[type="submit"] {
-  background-color: #49c7e8;
-  color: #fff !important;
-  border: 4px solid #49c7e8;
-  cursor: pointer;
-  display: inline-block;
-  fill: #fff;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  font-weight: bold;
-  line-height: 1em;
-  margin: 0.61803em 0;
-  padding: 0.61803em 1.61803em;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-  -webkit-appearance: none;
-}
-/* line 20, ../scss/base/_buttons.scss */
-.button:visited,
-button:visited, .button--alt:visited, input[type="submit"]:visited {
-  color: #fff;
-  fill: #fff;
-}
-/* line 25, ../scss/base/_buttons.scss */
-.button:hover,
-button:hover, .button--alt:hover, input[type="submit"]:hover, .button:focus,
-button:focus, .button--alt:focus, input[type="submit"]:focus, .zeroclipboard-is-hover.button,
-button.zeroclipboard-is-hover, .zeroclipboard-is-hover.button--alt, input.zeroclipboard-is-hover[type="submit"] {
-  background: #49c7e8;
-  border: 0.1459em solid #49c7e8;
-  color: #fff;
-  fill: #fff;
-  outline: none;
-}
-/* line 35, ../scss/base/_buttons.scss */
-.button--disabled.button,
-button.button--disabled, .button--disabled.button--alt, input.button--disabled[type="submit"], .button:disabled,
-button:disabled, .button--alt:disabled, input[type="submit"]:disabled, [disabled].button,
-button[disabled], [disabled].button--alt, input[disabled][type="submit"] {
-  background-color: #505050 !important;
-  border-color: #505050 !important;
-  color: #fff !important;
-  cursor: not-allowed;
-  fill: #fff !important;
-}
-/* line 45, ../scss/base/_buttons.scss */
-.button svg,
-button svg, .button--alt svg, input[type="submit"] svg {
-  margin-bottom: -0.61803em;
-  margin-top: -0.61803em;
-}
-
-/* line 51, ../scss/base/_buttons.scss */
-.button--inline {
-  display: inline-block;
-}
-
-/* line 55, ../scss/base/_buttons.scss */
-.button,
-button {
-  margin-right: 0.61803em;
-}
-
-/* line 61, ../scss/base/_buttons.scss */
-.button--auto-width, .button--alt {
-  width: auto;
-}
-
-/* line 65, ../scss/base/_buttons.scss */
-.button--alt {
-  position: absolute;
-  top: -3em;
-  right: 0;
-  background-color: #ef3849 !important;
-  border: 3px solid #fff;
-}
-
-/* line 79, ../scss/base/_buttons.scss */
-input[type="submit"] {
-  margin: 0;
-  float: right;
-  width: auto;
-  -webkit-appearance: none;
-}
-
-/* line 87, ../scss/base/_buttons.scss */
-.button--active {
-  background-color: #5dc2a7;
-  border-color: #5dc2a7;
-}
-/* line 91, ../scss/base/_buttons.scss */
-.button--active:hover, .button--active:focus, .button--active.zeroclipboard-is-hover {
-  background: #a7decf;
-}
-
-/* line 98, ../scss/base/_buttons.scss */
-button {
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 103, ../scss/base/_buttons.scss */
-.button--description__button {
-  display: inline;
-  margin-right: 0.61803em;
-}
-
-/* line 108, ../scss/base/_buttons.scss */
-.button--description__text {
-  display: inline;
-  font-size: 11px;
-  font-style: italic;
-  font-weight: bold;
-  margin: 0 !important;
 }

@@ -64,9 +64,6 @@ button {
 
 %button--alt {
     @extend %button;
-    position: absolute;
-    top: -3em;
-    right: 0;
     background-color: $color__pink !important;
     border: 3px solid $color__white;
     @extend .button--auto-width;

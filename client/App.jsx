@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import React, {PropTypes} from 'react';
 import {HeaderContainer} from './common/headerContainer';
+import {Sidebar} from './common/sidebar';
 import {Footer} from './common/footer';
 
 class App extends React.Component {
@@ -8,7 +9,10 @@ class App extends React.Component {
     return(
       <div className="container-fluid">
         <HeaderContainer />
-          {this.props.children}
+        <Sidebar />
+          <main>
+            {this.props.children}
+          </main>
         <Footer />
       </div>
     );
