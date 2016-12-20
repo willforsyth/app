@@ -1,16 +1,16 @@
 @import "compass";
+@import "base/_reset";
 
 @import "base/mixins/_breakpoints";
 @import "base/mixins/_pow";
 @import "base/_variables";
 @import "base/_color-scheme";
 @import "base/_typography";
+@import "base/_headings";
 @import "base/_common";
-
 
 @import "base/_footer";
 @import "base/_forms";
-@import "base/_reset";
 @import "base/_shame";
 
 @import "layout/_header";

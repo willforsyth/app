@@ -6,7 +6,7 @@ const AccountPage = (props) => {
 
     return(
       <div>
-        <form action="" onSubmit={props.updateData} className="readonly editForm grid">
+        <form action="" onSubmit={props.updateData} className="readonly editForm">
           <div className="editForm--item">
             <label className="column column__3-of-12">First Name: </label>
             <input className="column column__9-of-12" name="FirstName" type="text" defaultValue={props.user.profile.firstname} readOnly />
@@ -20,7 +20,7 @@ const AccountPage = (props) => {
             <input className="column column__9-of-12" name="email" type="email" defaultValue={props.user.profile.email} readOnly />
           </div>
             <input type="submit" />
-            <a href="#" className="edit button--alt" onClick={props.handleClick}>Edit form</a>
+            <a href="#" className="edit" onClick={props.handleClick}>Edit form</a>
         </form>
       </div>
     );

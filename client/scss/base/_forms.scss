@@ -17,13 +17,18 @@
     font-size: 1em;
     display: block;
     padding: $ratio--inv#{em};
-    background-color: $color__white;
+    background-color: none;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 3px solid #ffffff;
+    background: none;
     color: $color__white;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
 
     &:focus{
-        border-color: $color__black;
+        border-color: $color__blue;
         outline: none;
     }
 
@@ -32,20 +37,16 @@
         color: $color__white;
 
         &:focus{
-            background-color: $color__white;
             color: $color__black;
             border-color: $color__red;
         }
     }
 
     .success &{
-        background-color: $color__green;
         border-color: $color__green;
         color: $color__white;
 
         &:focus{
-            background-color: $color__white;
-            color: $color__black;
             border-color: $color__green;
         }
     }
@@ -91,6 +92,7 @@ textarea{
 
 select{
     cursor: pointer;
+    width: 100%;
 }
 
 .error{
@@ -111,9 +113,16 @@ select{
 
 // Styles for the Checkboxes and the radios
 
+.radios {
+  li {
+    display: inline-block;
+    margin-right: $ratio--inv#{em};
+  }
+}
+
 input[type="checkbox"],
 input[type="radio"]{
-    display: none;
+    // display: none;
 
     & ~ span {
         display: inline-block;
@@ -121,8 +130,7 @@ input[type="radio"]{
         height: 1em;
         background-color: none;
         border: 1px solid $color__white;
-        margin-left: $ratio--inv#{em};
-        margin-left: -3em;
+        margin-right: $ratio--inv#{em};
     }
 
     & ~ label{
@@ -186,4 +194,14 @@ input[type="radio"]{
   [type=submit] {
     display: none;
   }
+}
+
+.signup {
+  input {
+    width: 100%;
+  }
+}
+
+.radios {
+  clear: both;
 }
