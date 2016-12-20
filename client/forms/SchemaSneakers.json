@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "sneakers": {
+      "type": "object",
+      "properties": {
+        "make": {"type": "string"},
+        "size": {  "type": "number",
+                 "enum": [1, 2, 3],
+                 "enumNames": ["one", "two", "three"]
+               },
+        "description": {"type": "string"},
+        "thumbnail": {"type": "string"}
+      }
+    }
+  }
+}

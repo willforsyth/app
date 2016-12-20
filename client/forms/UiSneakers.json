@@ -1,0 +1,16 @@
+{
+  "sneakers": {
+    "make": {
+      "ui:widget": "text"
+    },
+    "size": {
+      "ui:widget": "select"
+    },
+    "description": {
+      "ui:widget": "textarea"
+    },
+    "thumbnail": {
+      "ui:widget": "file"
+    }
+  }
+}

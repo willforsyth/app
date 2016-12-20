@@ -1,12 +1,12 @@
 import React from 'react';
 
 const ItemsPage = (props) => {
- console.log(props.user.items)
+ console.log(props.user.item)
  return(
-     <section>
-       <h2>Item title: {props.user.items.title}</h2>
-       <p>Category: {props.user.items.category}</p>
-       <p>Description: {props.user.items.description}</p>
+     <section className="column column__center column__8-of-12">
+       <h2>{props.user.item.title}</h2>
+       <p>{props.user.item.category}</p>
+       <p>{props.user.item.description}</p>
      </section>
  )
 }

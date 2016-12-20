@@ -10,7 +10,7 @@ import './components/account/accounts-config.js';
 
 // Create a session for the user.
 Session.set('userSession', Meteor.userId());
-Meteor.subscribe('userData');
+Meteor.subscribe('userData', 'items');
 
 Meteor.startup(() => {
   render(<Router history={browserHistory} routes={routes}/>, document.getElementById('render-target'));
@@ -18,21 +18,33 @@ Meteor.startup(() => {
 
 
 Template.body.events({
-	'submit .new-profile': function(event) {
+  	'submit .new-profile': function(event) {
+      let get = event.target,
+          firstname = get.FirstName.value,
+          surname = get.surname.value,
+          email = get.email.value
+
+  		Meteor.call('updateProfile', firstname, surname, email);
+
+  		event.preventDefault();
+  		return false;
+
+  },
+  'submit .new-item': function(event) {
+    // Update the user collection with the form data.
     let get = event.target,
-        firstname = get.FirstName.value,
-        surname = get.surname.value,
-        email = get.email.value
-		// Update the user collection with the form data.
+        make = get.root_sneakers_make.value,
+        description = get.root_sneakers_description.value,
+        size = get.root_sneakers_size.value;
+        thumbnail = get.root_sneakers_thumbnail.value;
 
-		Meteor.call('updateProfile', firstname, surname, email);
+    console.log(make + description + size + thumbnail);
 
-		// Stop the page from refreshing.
-		event.preventDefault();
+    Meteor.call('addSneaker', make, description, size, thumbnail);
 
-		// Return false to stop the page from refreshing.
-		return false;
+    event.preventDefault();
+    return false;
 
-	//Don't forget this comma!
-	}
+  },
+
 });

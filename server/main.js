@@ -21,7 +21,37 @@ Meteor.methods({
       "profile.email": email
     }});
   },
-})
+  addItem: function(firstname, surname, email){
+    if(! Meteor.userId()){
+      throw new Meteor.Error('Access denied.');
+    }
+
+    Meteor.users.update({_id:Meteor.userId()}, {$set: {
+      "profile.firstname": firstname,
+      "profile.surname": surname,
+      "profile.email": email
+    }});
+  },
+
+  // Update the current user's self assessment form
+  addSneaker: function(make, description, size, thumbnail){
+    if(! Meteor.userId()){
+      throw new Meteor.Error('Access denied.');
+    }
+
+    console.log(description + size + make + 'server');
+
+
+    /// this needs to be insert but wouldnt work needs investigating
+    Meteor.users.update({_id: Meteor.userId()}, {$set: {
+        "item.title": make,
+        "item.description": description,
+        "item.category": size,
+        "item.thumbnail": thumbnail
+    }});
+  }
+
+});
 
 Accounts.onCreateUser(function(options, user) {
   // We're enforcing at least an empty profile object to avoid needing to check
@@ -32,9 +62,12 @@ Accounts.onCreateUser(function(options, user) {
     "email": ''
   },
   user.items = options.item ? options.item : {
+    "item": ''
+  };
+  user.items.item = options.item ? options.item : {
     "title": '',
-    "category": '',
-    "desctiption": ''
+    "description": '',
+    "category": ''
   };
   return user;
 })
