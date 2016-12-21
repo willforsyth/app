@@ -16,7 +16,6 @@
 %input{
     font-size: 1em;
     display: block;
-    padding: $ratio--inv#{em};
     background-color: none;
     border-left: 0;
     border-top: 0;
@@ -153,6 +152,10 @@ input[type="radio"]{
     }
 }
 
+input[type="file"], select{
+  border-bottom: none !important;
+}
+
 // Optional class to add to form to create optional content
 
 .optional{
@@ -165,16 +168,18 @@ input[type="radio"]{
   position: relative;
   width: 50%;
   margin: auto;
-  input {
+
+  input, textarea {
     border-left: 0;
     border-top: 0;
     border-right: 0;
     border-bottom: 3px solid #ffffff;
     background: none;
+    width: 100%;
   }
   input,
     label{
-      margin-bottom: .6em;
+      margin: $ratio--inv#{em} 0;
       font-family: $body-font;
       padding-left: 0;
       display: inline-block;
@@ -185,9 +190,21 @@ input[type="radio"]{
           border: none;
         }
     }
+    label {
+      display: none;
+    }
+    .help-block {
+      color: $color__pink;
+      font-size: $ratio--inv#{em};
+
+    }
 }
-.editForm--item {
+.editForm--item, .form-group {
   clear: both;
+}
+
+textarea {
+  min-height: 6em;
 }
 
 .readonly{

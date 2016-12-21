@@ -1,16 +1,20 @@
 {
   "sneakers": {
     "make": {
-      "ui:widget": "text"
+      "ui:widget": "text",
+      "ui:placeholder": "Nike"
     },
     "size": {
       "ui:widget": "select"
     },
     "description": {
-      "ui:widget": "textarea"
+      "ui:widget": "textarea",
+      "ui:placeholder": "Super limited edtion sneaks",
+      "ui:help": "Make it memorable and be honest."
     },
     "thumbnail": {
-      "ui:widget": "file"
+      "ui:widget": "file",
+      "ui:help": "upload square image only"
     }
   }
 }

@@ -6,8 +6,6 @@ Meteor.startup(() => {
 
 });
 
-
-
 Meteor.methods({
   // Normal - Update the current user's profile.
   updateProfile: function(firstname, surname, email){
@@ -77,7 +75,7 @@ Accounts.onCreateUser(function(options, user) {
     "category": ''
   };
   return user;
-})
+});
 
 Meteor.publish("userData", function () {
   if (this.userId) {
@@ -86,6 +84,19 @@ Meteor.publish("userData", function () {
     this.ready();
   }
 });
+
+// Meteor.publish('UserProfile', function() {
+//   if (this.userId) {
+//     return Meteor.users.find({_id: this.userId}, });
+//   } else {
+//     this.ready();
+//   }
+// });
+
+Meteor.publish('allUsersItems', function() {
+  return Meteor.users.find({}, {fields: {'item': 1}});
+});
+
 
 // Meteor.publish('usersItems', function(){
 //     return users.find();

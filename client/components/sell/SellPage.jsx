@@ -5,10 +5,11 @@ import Form from "react-jsonschema-form";
 import sneakers_ui from '../../forms/UiSneakers.json';
 import schema from '../../forms/SchemaSneakers.json'
 
-const SellPage = (props) => {
+const SellPage = () => {
 
-    // need to handle images through a cdn
-    console.log(props.user.item.thumbnail)
+    // // need to handle images through a cdn
+    //   console.log(props.user.item);
+    //   console.log(props.user.username);
 
     const log = (type) => console.log.bind(console, type);
 

@@ -198,7 +198,6 @@ textarea,
 select {
   font-size: 1em;
   display: block;
-  padding: 0.61803em;
   background-color: none;
   border-left: 0;
   border-top: 0;
@@ -209,7 +208,7 @@ select {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
 }
-/* line 30, ../scss/base/_forms.scss */
+/* line 29, ../scss/base/_forms.scss */
 input[type='text']:focus,
 input[type='email']:focus,
 input[type='password']:focus,
@@ -222,7 +221,7 @@ select:focus {
   border-color: #49c7e8;
   outline: none;
 }
-/* line 35, ../scss/base/_forms.scss */
+/* line 34, ../scss/base/_forms.scss */
 .error input[type='text'],
 .error input[type='email'],
 .error input[type='password'],
@@ -235,7 +234,7 @@ select:focus {
   background-color: #650d0f;
   color: #fff;
 }
-/* line 39, ../scss/base/_forms.scss */
+/* line 38, ../scss/base/_forms.scss */
 .error input[type='text']:focus,
 .error input[type='email']:focus,
 .error input[type='password']:focus,
@@ -248,7 +247,7 @@ select:focus {
   color: #313131;
   border-color: #650d0f;
 }
-/* line 45, ../scss/base/_forms.scss */
+/* line 44, ../scss/base/_forms.scss */
 .success input[type='text'],
 .success input[type='email'],
 .success input[type='password'],
@@ -261,7 +260,7 @@ select:focus {
   border-color: #5dc2a7;
   color: #fff;
 }
-/* line 49, ../scss/base/_forms.scss */
+/* line 48, ../scss/base/_forms.scss */
 .success input[type='text']:focus,
 .success input[type='email']:focus,
 .success input[type='password']:focus,
@@ -273,7 +272,7 @@ select:focus {
 .success select:focus {
   border-color: #5dc2a7;
 }
-/* line 54, ../scss/base/_forms.scss */
+/* line 53, ../scss/base/_forms.scss */
 input[disabled][type='text'],
 input[disabled][type='email'],
 input[disabled][type='password'],
@@ -288,60 +287,60 @@ select[disabled] {
   cursor: not-allowed;
 }
 
-/* line 61, ../scss/base/_forms.scss */
+/* line 60, ../scss/base/_forms.scss */
 .filterSection {
   margin-top: 3em;
   display: none;
 }
-/* line 65, ../scss/base/_forms.scss */
+/* line 64, ../scss/base/_forms.scss */
 .filterSection li {
   float: left;
   margin-right: 0.5em;
 }
 @media (min-width: 52em) {
-  /* line 61, ../scss/base/_forms.scss */
+  /* line 60, ../scss/base/_forms.scss */
   .filterSection {
     display: block;
   }
 }
 
-/* line 73, ../scss/base/_forms.scss */
+/* line 72, ../scss/base/_forms.scss */
 .blog--filter {
   float: left;
 }
 
-/* line 89, ../scss/base/_forms.scss */
+/* line 88, ../scss/base/_forms.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 93, ../scss/base/_forms.scss */
+/* line 92, ../scss/base/_forms.scss */
 select {
   cursor: pointer;
   width: 100%;
 }
 
-/* line 99, ../scss/base/_forms.scss */
+/* line 98, ../scss/base/_forms.scss */
 .error .message {
   margin: 0.61803em 0;
   color: #650d0f;
   fill: #650d0f;
 }
 
-/* line 107, ../scss/base/_forms.scss */
+/* line 106, ../scss/base/_forms.scss */
 .success .message {
   margin: 0.61803em 0;
   color: #5dc2a7;
   fill: #5dc2a7;
 }
 
-/* line 117, ../scss/base/_forms.scss */
+/* line 116, ../scss/base/_forms.scss */
 .radios li {
   display: inline-block;
   margin-right: 0.61803em;
 }
 
-/* line 127, ../scss/base/_forms.scss */
+/* line 126, ../scss/base/_forms.scss */
 input[type="checkbox"] ~ span,
 input[type="radio"] ~ span {
   display: inline-block;
@@ -351,73 +350,93 @@ input[type="radio"] ~ span {
   border: 1px solid #fff;
   margin-right: 0.61803em;
 }
-/* line 136, ../scss/base/_forms.scss */
+/* line 135, ../scss/base/_forms.scss */
 input[type="checkbox"] ~ label,
 input[type="radio"] ~ label {
   position: relative;
   cursor: pointer;
   padding-right: 4em;
 }
-/* line 143, ../scss/base/_forms.scss */
+/* line 142, ../scss/base/_forms.scss */
 input[type="checkbox"]:checked ~ span,
 input[type="radio"]:checked ~ span {
   border: 1px solid #49c7e8;
   background: #49c7e8;
 }
 
-/* line 151, ../scss/base/_forms.scss */
+/* line 150, ../scss/base/_forms.scss */
 input[type="radio"] ~ span {
   border-radius: 100%;
 }
 
-/* line 159, ../scss/base/_forms.scss */
+/* line 155, ../scss/base/_forms.scss */
+input[type="file"], select {
+  border-bottom: none !important;
+}
+
+/* line 162, ../scss/base/_forms.scss */
 .optional label:after {
   content: " (optional)";
 }
 
-/* line 164, ../scss/base/_forms.scss */
+/* line 167, ../scss/base/_forms.scss */
 .editForm {
   position: relative;
   width: 50%;
   margin: auto;
 }
-/* line 168, ../scss/base/_forms.scss */
-.editForm input {
+/* line 172, ../scss/base/_forms.scss */
+.editForm input, .editForm textarea {
   border-left: 0;
   border-top: 0;
   border-right: 0;
   border-bottom: 3px solid #ffffff;
   background: none;
+  width: 100%;
 }
-/* line 175, ../scss/base/_forms.scss */
+/* line 180, ../scss/base/_forms.scss */
 .editForm input,
 .editForm label {
-  margin-bottom: .6em;
+  margin: 0.61803em 0;
   font-family: "Lato", sans-serif;
   padding-left: 0;
   display: inline-block;
 }
-/* line 184, ../scss/base/_forms.scss */
+/* line 189, ../scss/base/_forms.scss */
 .editForm input[readOnly] {
   border: none;
 }
+/* line 193, ../scss/base/_forms.scss */
+.editForm label {
+  display: none;
+}
+/* line 196, ../scss/base/_forms.scss */
+.editForm .help-block {
+  color: #ef3849;
+  font-size: 0.61803em;
+}
 
-/* line 189, ../scss/base/_forms.scss */
-.editForm--item {
+/* line 202, ../scss/base/_forms.scss */
+.editForm--item, .form-group {
   clear: both;
 }
 
-/* line 194, ../scss/base/_forms.scss */
+/* line 206, ../scss/base/_forms.scss */
+textarea {
+  min-height: 6em;
+}
+
+/* line 211, ../scss/base/_forms.scss */
 .readonly [type=submit] {
   display: none;
 }
 
-/* line 200, ../scss/base/_forms.scss */
+/* line 217, ../scss/base/_forms.scss */
 .signup input {
   width: 100%;
 }
 
-/* line 205, ../scss/base/_forms.scss */
+/* line 222, ../scss/base/_forms.scss */
 .radios {
   clear: both;
 }
