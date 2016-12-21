@@ -9,10 +9,11 @@ import AccountCont from './components/account/AccountContainer';
 import ItemsContainer from './components/account/items/ItemsContainer';
 import LoginContainer from './components/account/login/LoginContainer';
 import SellContainer from './components/sell/SellContainer';
+import HomeContainer from './components/home/HomeContainer';
 
 export default(
   <Route path="/" component={App}>
-    <IndexRoute component={HomePage} />
+    <IndexRoute component={HomeContainer} />
     <Route path="/sneakers" component={SneakersPage} />
     <Route path="/login" component={LoginContainer} />
     <Route path="/how-it-works" component={HowItWorks} />

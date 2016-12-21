@@ -51,9 +51,8 @@ class AccountCont extends Component {
 
   render(){
       // console.log(this.userId);
-      let user = Meteor.users.find({_id:Meteor.userId()}).count();
+      let user = Meteor.users.find({_id:Meteor.userId()}).fetch();
       let userFirst = user[0];
-      console.log(user);
 
       return(
           <div className="cont">
@@ -65,4 +64,8 @@ class AccountCont extends Component {
 
 // export default AccountCont;
 
-export default AccountCont;
+export default createContainer(() => {
+  return {
+    users: Meteor.users.find({}).fetch(),
+  };
+},AccountCont);

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class HomePage extends React.Component {
-  render(){
-    return(
-      <div className="container-fluid">
-        <h1>Hello</h1>
-      </div>
-    );
-  }
+const HomePage = (props) => {
+  console.log(props.user.item)
+  return(
+      <section className="column column__center column__8-of-12">
+        <h2>{props.user.item.title}</h2>
+        <p>{props.user.item.category}</p>
+      </section>
+  )
 }
 
 export {HomePage};
