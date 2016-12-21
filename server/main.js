@@ -39,8 +39,7 @@ Meteor.methods({
       throw new Meteor.Error('Access denied.');
     }
 
-    console.log(description + size + make + 'server');
-
+    console.log(Meteor.users);
 
     /// this needs to be insert but wouldnt work needs investigating
     Meteor.users.update({_id: Meteor.userId()}, {$set: {
@@ -49,6 +48,14 @@ Meteor.methods({
         "item.category": size,
         "item.thumbnail": thumbnail
     }});
+
+		// SubmittedForms.insert({
+		// 	"user_id": Meteor.userId(),
+		// 	"submittedDate": new Date(),
+		// 	"updateDate": new Date(),
+		// 	"state": "live",
+		// 	answers
+		// });
   }
 
 });
@@ -64,7 +71,7 @@ Accounts.onCreateUser(function(options, user) {
   user.items = options.item ? options.item : {
     "item": ''
   };
-  user.items.item = options.item ? options.item : {
+  user.items = options.item ? options.item : {
     "title": '',
     "description": '',
     "category": ''

@@ -6,7 +6,7 @@ const ItemsPage = (props) => {
      <section className="column column__center column__8-of-12">
        <h2>{props.user.item.title}</h2>
        <p>{props.user.item.category}</p>
-       <p>{props.user.item.description}</p>
+       <p>{props.user.item.thumbnail}</p>
      </section>
  )
 }
