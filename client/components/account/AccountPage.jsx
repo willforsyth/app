@@ -1,7 +1,6 @@
 import React from 'react';
 
 const AccountPage = (props) => {
-console.log(props.user.profile);
     return(
       <div>
          <form action="" onSubmit={props.updateData} className="readonly editForm">

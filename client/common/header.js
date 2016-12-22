@@ -6,6 +6,7 @@ import {AccountLink} from './accountLink';
 const Header = () => {
    return (
      <header>
+      <IndexLink to="/" activeClassName="active">Rarre</IndexLink>
        <nav className="nav-main">
          <Link to="how-it-works" activeClassName="active">How it works</Link>
          <AccountsUIWrapper />

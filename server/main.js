@@ -77,7 +77,7 @@ Accounts.onCreateUser(function(options, user) {
   return user;
 });
 
-Meteor.publish("userData", function () {
+Meteor.publish("userData", function() {
   if (this.userId) {
     return Meteor.users.find({_id: this.userId});
   } else {
@@ -85,13 +85,6 @@ Meteor.publish("userData", function () {
   }
 });
 
-// Meteor.publish('UserProfile', function() {
-//   if (this.userId) {
-//     return Meteor.users.find({_id: this.userId}, });
-//   } else {
-//     this.ready();
-//   }
-// });
 
 Meteor.publish('allUsersItems', function() {
   return Meteor.users.find({}, {fields: {'item': 1}});

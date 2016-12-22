@@ -6,18 +6,28 @@ import { createContainer } from 'meteor/react-meteor-data';
 // App component - represents the whole app
 class AccountCont extends Component {
 
-  // constructor() {
-  //   super();
-  //   const subscription = Meteor.subscribe('allUsersItems', this.props.postId);
-  //   this.state = {
-  //     ready: subscription.ready(),
-  //     subscription: subscription
-  //   }
-  // }
-  //
-  // componentWillUnmount() {
-  //    this.state.subscription.stop();
-  //  }
+  constructor() {
+      super();
+      this.state = {
+        subscription: {
+          user: Meteor.subscribe('userData')
+        }
+      }
+  }
+
+  componentWillUnmount() {
+      this.state.subscription.user.stop();
+  }
+
+  item() {
+      return Meteor.users.find({_id:Meteor.userId()}).fetch();
+  }
+
+  renderItemsList() {
+    return this.item().map((user) => (
+      <AccountPage key={user._id} user={user} handleClick={this.handleClick.bind(this)} updateData={this.updateData.bind(this)} />
+    ));
+  }
 
   handleClick(e) {
       e.preventDefault();
@@ -43,20 +53,11 @@ class AccountCont extends Component {
     Meteor.call('updateProfile', firstName, surname, email);
   }
 
-  // renderUserList() {
-  //   return this.props.users.map((user) => (
-  //     <AccountPage key={user._id} user={user} handleClick={this.handleClick.bind(this)} updateData={this.updateData.bind(this)} />
-  //   ));
-  // }
 
   render(){
-      // console.log(this.userId);
-      let user = Meteor.users.find({_id:Meteor.userId()}).fetch();
-      let userFirst = user[0];
-
       return(
           <div className="cont">
-            <AccountPage user={userFirst} handleClick={this.handleClick.bind(this)} updateData={this.updateData.bind(this)} />
+            {this.renderItemsList()}
           </div>
       );
     }
@@ -64,8 +65,4 @@ class AccountCont extends Component {
 
 // export default AccountCont;
 
-export default createContainer(() => {
-  return {
-    users: Meteor.users.find({}).fetch(),
-  };
-},AccountCont);
+export default AccountCont;

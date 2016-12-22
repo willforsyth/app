@@ -1,25 +1,49 @@
-import React, { Component, PropTypes } from 'react';
+ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import ItemsPage from './ItemsPage';
 import { createContainer } from 'meteor/react-meteor-data';
+import { Tracker } from 'meteor/tracker';
+import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
 // App component - represents the whole app
-class ItemsContainer extends Component {
+class ItemsContainer extends TrackerReact(React.Component) {
+
+    constructor() {
+        super();
+        this.state = {
+          subscription: {
+            item: Meteor.subscribe('userData')
+          }
+        }
+    }
+
+    componentWillUnmount() {
+        this.state.subscription.item.stop();
+    }
+
+    item() {
+        return Meteor.users.find({_id:Meteor.userId()}).fetch();
+    }
+
+    renderItemsList() {
+      return this.item().map((user) => (
+        <ItemsPage key={user._id} user={user} />
+      ));
+    }
 
   render(){
-    let user = Meteor.users.find({_id:Meteor.userId()}).fetch();
-    let userFirst = user[0];
-    console.log(userFirst)
     return(
       <div className="cont">
-        <ItemsPage user={userFirst} />
+        {this.renderItemsList()}
       </div>
     )
   }
 }
 
-export default createContainer(() => {
-  return {
-    users: Meteor.users.find({}).fetch(),
-  };
-}, ItemsContainer);
+export default ItemsContainer;
+
+
+// let user = Meteor.users.find({_id:Meteor.userId()}).fetch();
+// let userFirst = user[0];
+//
+// console.log(userFirst)

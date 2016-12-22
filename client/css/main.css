@@ -77,7 +77,7 @@ table {
 html {
   font-family: "Lato", sans-serif;
   line-height: 1.61803em;
-  font-size: 16px;
+  font-size: 146px;
   font-weight: 300;
   direction: ltr;
   display: block;
@@ -89,21 +89,7 @@ html {
 @media (min-width: 38em) {
   /* line 22, ../scss/base/_typography.scss */
   body {
-    font-size: 0.875em;
-    line-height: 1.61803em;
-  }
-}
-@media (min-width: 52em) {
-  /* line 22, ../scss/base/_typography.scss */
-  body {
-    font-size: 1.125em;
-    line-height: 1.61803em;
-  }
-}
-@media (min-width: 72em) {
-  /* line 22, ../scss/base/_typography.scss */
-  body {
-    font-size: 1.375em;
+    font-size: 0.10959em;
     line-height: 1.61803em;
   }
 }
@@ -979,7 +965,7 @@ a {
 html {
   font-family: "Lato", sans-serif;
   line-height: 1.61803em;
-  font-size: 16px;
+  font-size: 146px;
   font-weight: 300;
   direction: ltr;
   display: block;
@@ -991,21 +977,7 @@ html {
 @media (min-width: 38em) {
   /* line 22, ../scss/base/_typography.scss */
   body {
-    font-size: 0.875em;
-    line-height: 1.61803em;
-  }
-}
-@media (min-width: 52em) {
-  /* line 22, ../scss/base/_typography.scss */
-  body {
-    font-size: 1.125em;
-    line-height: 1.61803em;
-  }
-}
-@media (min-width: 72em) {
-  /* line 22, ../scss/base/_typography.scss */
-  body {
-    font-size: 1.375em;
+    font-size: 0.10959em;
     line-height: 1.61803em;
   }
 }
