@@ -19,8 +19,10 @@ Meteor.startup(() => {
 });
 
 
-Meteor.subscribe('userData');
-Meteor.subscribe('allUsersItems');
+Tracker.autorun(function(){
+  Meteor.subscribe('userData');
+  Meteor.subscribe('allUsersItems');
+});
 
 
 Template.body.events({

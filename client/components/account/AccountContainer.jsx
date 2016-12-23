@@ -6,6 +6,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 // App component - represents the whole app
 class AccountCont extends Component {
 
+  // this is not being used/////
   constructor() {
       super();
       this.state = {
@@ -18,6 +19,7 @@ class AccountCont extends Component {
   componentWillUnmount() {
       this.state.subscription.user.stop();
   }
+  // this is not being used/////
 
   item() {
       return Meteor.users.find({_id:Meteor.userId()}).fetch();
@@ -56,9 +58,11 @@ class AccountCont extends Component {
 
   render(){
       return(
+        <div>
           <div className="cont">
             {this.renderItemsList()}
           </div>
+        </div>
       );
     }
 }

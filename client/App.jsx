@@ -5,6 +5,7 @@ import {Sidebar} from './common/sidebar';
 import {Footer} from './common/footer';
 
 class App extends React.Component {
+
   render(){
     return(
       <div className="container-fluid">

@@ -8,9 +8,9 @@ const Header = () => {
      <header>
       <IndexLink to="/" activeClassName="active">Rarre</IndexLink>
        <nav className="nav-main">
-         <Link to="how-it-works" activeClassName="active">How it works</Link>
+         <IndexLink to="how-it-works" activeClassName="active">How it works</IndexLink>
          <AccountsUIWrapper />
-         <Link to="Sell-item" className="button button--auto-width" activeClassName="active">Sell item</Link>
+         <IndexLink to="Sell-item" className="button button--auto-width" activeClassName="active">Sell item</IndexLink>
        </nav>
         <AccountLink />
      </header>

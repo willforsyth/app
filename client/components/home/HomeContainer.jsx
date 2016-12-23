@@ -7,6 +7,7 @@ import TrackerReact from 'meteor/ultimatejs:tracker-react';
 // App component - represents the whole app
 class HomeContainer extends TrackerReact(React.Component) {
 
+  // this is not being used/////
   constructor() {
       super();
       this.state = {
@@ -19,6 +20,7 @@ class HomeContainer extends TrackerReact(React.Component) {
   componentWillUnmount() {
       this.state.subscription.items.stop();
   }
+  // this is not being used/////
 
   item() {
       return Meteor.users.find().fetch();

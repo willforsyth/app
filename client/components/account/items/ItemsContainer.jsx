@@ -1,4 +1,4 @@
- import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import ItemsPage from './ItemsPage';
 import { createContainer } from 'meteor/react-meteor-data';
@@ -8,28 +8,30 @@ import TrackerReact from 'meteor/ultimatejs:tracker-react';
 // App component - represents the whole app
 class ItemsContainer extends TrackerReact(React.Component) {
 
-    constructor() {
-        super();
-        this.state = {
-          subscription: {
-            item: Meteor.subscribe('userData')
-          }
+  // this is not being used/////
+  constructor(props) {
+      super(props);
+      this.state = {
+        subscription: {
+          item: Meteor.subscribe('userData')
         }
-    }
+      }
+  }
 
-    componentWillUnmount() {
-        this.state.subscription.item.stop();
-    }
+  componentWillUnmount() {
+      this.state.subscription.item.stop();
+  }
+  //// this is not being used/////
 
-    item() {
-        return Meteor.users.find({_id:Meteor.userId()}).fetch();
-    }
+  item() {
+      return Meteor.users.find({_id:Meteor.userId()}).fetch();
+  }
 
-    renderItemsList() {
-      return this.item().map((user) => (
-        <ItemsPage key={user._id} user={user} />
-      ));
-    }
+  renderItemsList() {
+    return this.item().map((user) => (
+      <ItemsPage key={user._id} user={user} />
+    ));
+  }
 
   render(){
     return(
