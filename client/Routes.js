@@ -10,7 +10,7 @@ import ItemsContainer from './components/account/items/ItemsContainer';
 import LoginContainer from './components/account/login/LoginContainer';
 import SellContainer from './components/sell/SellContainer';
 import HomeContainer from './components/home/HomeContainer';
-import ItemPage from './components/account/items/itemPage';
+import ItemContainer from './components/account/items/ItemContainer';
 
 export default(
   <Route path="/" component={App}>
@@ -20,7 +20,7 @@ export default(
     <Route path="/how-it-works" component={HowItWorks} />
     <Route path="/account" component={AccountCont} />
     <Route path="/my-items" component={ItemsContainer} />
-    <Route path="/details/(:id)" component={ItemPage} />
+    <Route path="/details/(:id)" component={ItemContainer} />
     <Route path="/Sell-item" component={SellContainer} />
   </Route>
 );

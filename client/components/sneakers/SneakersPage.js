@@ -32,3 +32,16 @@ export {SneakersPage};
 //     users: Meteor.users.find({}).fetch(),
 //   };
 // }, AccountCont);
+
+
+// <pre>
+// <code>
+//   {JSON.stringify(this.state, null, 4)}
+// </code>
+// </pre>
+// <pre>
+//   <code>
+//     {JSON.stringify(this.props, null, 4)}
+//   </code>
+// </pre>
+// <p>this is something {this.props.params.id}</p>

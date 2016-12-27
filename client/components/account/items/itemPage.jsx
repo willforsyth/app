@@ -1,44 +1,20 @@
-import React, { Component, PropTypes } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
-class ItemPage extends Component {
-
-  constructor(props) {
-      super(props);
-      this.state = {
-        data: Meteor.users.find().fetch(),
-        subscription: {
-          item: Meteor.subscribe('allUsersItems')
-        }
-      }
-  }
-
-  componentWillUnmount() {
-      this.state.subscription.item.stop();
-  }
-
-  // showData() {
-  //     if
-  // }
-
-  render(){
-      return (
-        <div>
-          <pre>
-            <code>
-              {JSON.stringify(this.state, null, 4)}
-            </code>
-          </pre>
-          <pre>
-            <code>
-              {JSON.stringify(this.props, null, 4)}
-            </code>
-          </pre>
-          <p>{this.props.params.id}</p>
-          <p>{this.state.data.id}</p>
-        </div>
-      )
-    }
+const ItemPage = (props) => {
+ if (props.user.item === undefined) {
+   return(
+      <section className="column column__center column__8-of-12">
+        You have no items
+     </section>
+   )
+ }
+ return(
+     <div>
+         <section className="column column__center column__8-of-12">
+           <h2>{props.user.item.title}</h2>
+         </section>
+     </div>
+ )
 }
 
 export default ItemPage;
