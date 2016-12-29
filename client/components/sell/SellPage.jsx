@@ -5,7 +5,7 @@ import Form from "react-jsonschema-form";
 import sneakers_ui from '../../forms/UiSneakers.json';
 import schema from '../../forms/SchemaSneakers.json'
 
-const SellPage = () => {
+const SellPage = (props) => {
 
     // // need to handle images through a cdn
     //   console.log(props.user.item);
@@ -25,5 +25,7 @@ const SellPage = () => {
 const onSubmitNotification = ({formData}) => console.log("yay I'm valid!");
 // const onSubmit = ({formData}) => console.log("yay I'm valid!" + formData.sneakers);
 const onSubmit = ({formData}) => Meteor.call('addSneaker', formData);
+
+// const submitAws = ({formData}) => Meteor.call('addSneaker', formData);
 
 export default SellPage;

@@ -445,6 +445,11 @@ textarea {
   box-sizing: border-box;
 }
 
+/* line 16, ../scss/base/_shame.scss */
+img {
+  width: 100%;
+}
+
 /* line 1, ../scss/layout/_header.scss */
 header {
   padding-bottom: 4em;

@@ -22,7 +22,6 @@ class ItemContainer extends Component {
   }
 
   item() {
-        console.log()
       return Meteor.users.find({"item.title": this.props.params.id}).fetch();
   }
 

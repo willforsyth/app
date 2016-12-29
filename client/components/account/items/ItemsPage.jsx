@@ -12,6 +12,7 @@ const ItemsPage = (props) => {
  return(
      <section className="column column__center column__8-of-12">
        <h2>{props.user.item.title}</h2>
+       <img src={props.user.item.thumbnail} title="" />
      </section>
  )
 }

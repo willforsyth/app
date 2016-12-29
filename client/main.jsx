@@ -38,6 +38,7 @@ Template.body.events({
   		return false;
 
   },
+
   'submit .new-item': function(event) {
     // Update the user collection with the form data.
     let get = event.target,
@@ -50,9 +51,46 @@ Template.body.events({
 
     Meteor.call('addSneaker', make, description, size, thumbnail);
 
+    let uploader = new Slingshot.Upload("myFileUploads");
+
+    uploader.send(document.getElementById('root_sneakers_thumbnail').files[0], function (error, downloadUrl) {
+      if (error) {
+        // Log service detailed response.
+        console.error('Error uploading', uploader.xhr.response);
+        alert (error);
+      }
+      else {
+        Meteor.users.update(Meteor.userId(), {$push: {"profile.images": downloadUrl}});
+      }
+    });
+
     event.preventDefault();
     return false;
-
   },
 
+});
+
+// Meteor.users.allow({
+//   insert: function (userId, doc) {
+//          return true;
+//   }
+// });
+
+Meteor.users.allow({
+  update: function (userId, doc, fieldNames, modifier, user) {
+         //similar checks like insert
+         return true;
+  }
+});
+
+// Meteor.users.allow({
+//     remove: function (userId, doc) {
+//            return true;
+//    }
+// });
+
+
+Slingshot.fileRestrictions("myFileUploads", {
+  allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
+  maxSize: 10 * 1024 * 1024 // 10 MB (use null for unlimited).
 });
