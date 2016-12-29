@@ -35,9 +35,9 @@ class HomeContainer extends TrackerReact(React.Component) {
   render(){
     console.log(this.item().item);
     return(
-      <div className="cont">
+      <main className="cont grid">
         {this.renderItemsList()}
-      </div>
+      </main>
     )
   }
 }

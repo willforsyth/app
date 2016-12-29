@@ -81,7 +81,7 @@ html {
   font-weight: 300;
   direction: ltr;
   display: block;
-  color: #ffffff;
+  color: #505050;
   unicode-bidi: embed;
   -webkit-locale: en-UK;
 }
@@ -123,12 +123,7 @@ h4 {
 
 /* line 1, ../scss/base/_common.scss */
 body {
-  background: #505050;
-}
-
-/* line 5, ../scss/base/_common.scss */
-main {
-  padding-left: 10%;
+  background: #fff;
 }
 
 /* line 1, ../scss/base/_footer.scss */
@@ -154,6 +149,11 @@ small {
   display: block;
   margin: auto;
   text-align: center;
+}
+
+/* line 1, ../scss/base/_items.scss */
+.item__thumbnail {
+  border: 1px solid;
 }
 
 /* line 2, ../scss/base/_forms.scss */
@@ -448,17 +448,7 @@ textarea {
 /* line 1, ../scss/layout/_header.scss */
 header {
   padding-bottom: 4em;
-  border-bottom: 1px solid;
-}
-
-/* line 6, ../scss/layout/_header.scss */
-.sidebar {
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  width: 10%;
-  top: 0;
-  border-right: 1px solid;
+  background: #505050;
 }
 
 /* line 1, ../scss/base/_buttons.scss */
@@ -581,8 +571,10 @@ button {
 .nav--account {
   float: right;
   clear: both;
+  position: relative;
+  z-index: 2;
 }
-/* line 4, ../scss/components/_nav.scss */
+/* line 6, ../scss/components/_nav.scss */
 .nav--account a {
   margin-left: 1em;
   display: inline-block;
@@ -590,12 +582,14 @@ button {
   color: #fff;
 }
 
-/* line 12, ../scss/components/_nav.scss */
+/* line 14, ../scss/components/_nav.scss */
 .nav-main {
   display: inline-block;
   float: right;
+  position: relative;
+  z-index: 2;
 }
-/* line 15, ../scss/components/_nav.scss */
+/* line 19, ../scss/components/_nav.scss */
 .nav-main a {
   margin-left: 1em;
   color: #fff;
@@ -969,7 +963,7 @@ html {
   font-weight: 300;
   direction: ltr;
   display: block;
-  color: #ffffff;
+  color: #505050;
   unicode-bidi: embed;
   -webkit-locale: en-UK;
 }

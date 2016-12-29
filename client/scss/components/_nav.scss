@@ -1,6 +1,8 @@
 .nav--account {
   float: right;
   clear: both;
+  position: relative;
+  z-index: 2;
   a {
     margin-left: 1em;
     display: inline-block;
@@ -12,6 +14,8 @@
 .nav-main {
   display: inline-block;
   float: right;
+  position: relative;
+  z-index: 2;
   a {
     margin-left: 1em;
     color: $color__white;

@@ -6,7 +6,13 @@ In no particular order
 
 /// Redux implementation of state and store, no more fetch data on each component please.
 
-/// custom url to view the items details
+/// Custom url bespoke url to view the items details
+
+/// Only show account info if logged in
+
+/// Sell item - show login if not logged in
+
+/// Custom login page
 
 /// CDN for images ( AWS? ) and send monogo the url
 
