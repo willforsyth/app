@@ -20,12 +20,9 @@ Meteor.startup(() => {
 });
 
 
-Tracker.autorun(function(){
-  Meteor.subscribe('userData');
-  Meteor.subscribe('allUsersItems');
-  Meteor.subscribe('items');
-});
-
+Meteor.subscribe('userData');
+Meteor.subscribe('allUsersItems');
+Meteor.subscribe('items');
 
 Template.body.events({
   	'submit .new-profile': function(event) {

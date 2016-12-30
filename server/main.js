@@ -43,12 +43,12 @@ Meteor.methods({
     console.log(Meteor.users);
 
     /// this needs to be insert but wouldnt work needs investigating
-    Meteor.users.update({_id: Meteor.userId()}, {$set: {
-        "item.title": make,
-        "item.description": description,
-        "item.category": size,
-        "item.thumbnail": thumbnail
-    }});
+    items.insert({
+        "title": make,
+        "description": description,
+        "category": size,
+        "thumbnail": thumbnail
+    });
 
 		// SubmittedForms.insert({
 		// 	"user_id": Meteor.userId(),
