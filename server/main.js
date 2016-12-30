@@ -2,9 +2,12 @@ import { Meteor } from 'meteor/meteor';
 
 import '../api/dataContainer';
 
+items = new Mongo.Collection('items');
+
 Meteor.startup(() => {
 
 });
+
 
 Meteor.methods({
   // Normal - Update the current user's profile.
@@ -65,15 +68,15 @@ Accounts.onCreateUser(function(options, user) {
     "firstname": '',
     "surname": '',
     "email": ''
-  },
-  user.items = options.item ? options.item : {
-    "item": ''
-  };
-  user.items = options.item ? options.item : {
-    "title": '',
-    "description": '',
-    "category": ''
-  };
+  }
+  // user.items = options.item ? options.item : {
+  //   "item": ''
+  // };
+  // user.items = options.item ? options.item : {
+  //   "title": '',
+  //   "description": '',
+  //   "category": ''
+  // };
   return user;
 });
 
@@ -88,6 +91,10 @@ Meteor.publish("userData", function() {
 
 Meteor.publish('allUsersItems', function() {
   return Meteor.users.find({}, {fields: {'item': 1}});
+});
+
+Meteor.publish('items', function() {
+	return items.find();
 });
 
 Slingshot.fileRestrictions("myFileUploads", {
