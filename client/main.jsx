@@ -47,8 +47,6 @@ Template.body.events({
         size = get.root_sneakers_size.value;
         thumbnail = get.root_sneakers_thumbnail.value;
 
-    console.log(make + description + size + thumbnail);
-
     Meteor.call('addSneaker', make, description, size, thumbnail);
 
     let uploader = new Slingshot.Upload("myFileUploads");
@@ -70,11 +68,11 @@ Template.body.events({
 
 });
 
-// Meteor.users.allow({
-//   insert: function (userId, doc) {
-//          return true;
-//   }
-// });
+Meteor.users.allow({
+  insert: function (userId, doc, fieldNames, modifier, user) {
+         return true;
+  }
+});
 
 Meteor.users.allow({
   update: function (userId, doc, fieldNames, modifier, user) {

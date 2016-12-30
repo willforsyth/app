@@ -40,12 +40,34 @@ Meteor.methods({
     console.log(Meteor.users);
 
     /// this needs to be insert but wouldnt work needs investigating
-    Meteor.users.update({_id: Meteor.userId()}, {$set: {
-        "item.title": make,
-        "item.description": description,
-        "item.category": size,
-        "item.thumbnail": thumbnail
-    }});
+    // Meteor.users.update({_id:Meteor.userId()}, {$push: {
+    //     "item.item_id": Meteor.userId(),
+    //     "item.title": make,
+    //     "item.description": description,
+    //     "item.category": size,
+    //     "item.thumbnail": thumbnail
+    // }});
+
+
+    // var object = {};
+    // object["answers." + section + ".formData"] = formData;
+    //
+    // Meteor.users.update({user_id: id}, {$set: object});
+
+    Meteor.users.update({
+          _id: Meteor.userId()
+      }, {
+          $set: {
+              "items": {
+                "itemNew": {
+                  "title": make,
+                  "description": description,
+                  "category": size,
+                  "thumbnail": thumbnail
+                }
+              }
+          }
+      });
 
 		// SubmittedForms.insert({
 		// 	"user_id": Meteor.userId(),
@@ -69,7 +91,7 @@ Accounts.onCreateUser(function(options, user) {
   user.items = options.item ? options.item : {
     "item": ''
   };
-  user.items = options.item ? options.item : {
+  items = options.item ? options.item : {
     "title": '',
     "description": '',
     "category": ''
@@ -119,6 +141,20 @@ Slingshot.createDirective("myFileUploads", Slingshot.S3Storage, {
   }
 });
 
+
+
+Meteor.users.allow({
+  insert: function (userId, doc, fieldNames) {
+         return true;
+  }
+});
+
+Meteor.users.allow({
+  update: function (userId, doc, fieldNames, modifier, user) {
+         //similar checks like insert
+         return true;
+  }
+});
 
 // Meteor.publish('usersItems', function(){
 //     return users.find();
