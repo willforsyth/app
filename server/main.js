@@ -69,7 +69,7 @@ Accounts.onCreateUser(function(options, user) {
     "surname": '',
     "email": ''
   }
-  // user.items = options.item ? options.item : {
+  // items = options.item ? options.item : {
   //   "item": ''
   // };
   // user.items = options.item ? options.item : {
