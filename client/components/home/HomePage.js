@@ -7,12 +7,13 @@ const HomePage = (props) => {
     //     <p></p>
     //   )
     // }
+    console.log(props.user.title)
   return(
       <article className="column column__3-of-12 item__thumbnail">
-        <h2>{props.sneaker.title}</h2>
-        <p>{props.sneaker.category}</p>
-        <IndexLink to={"details/" + props.sneaker.title} activeClassName="active">View details</IndexLink>
-        <img src={props.sneaker.thumbnail} title="" />
+        <h2>{props.user.title}</h2>
+        <p>{props.user.category}</p>
+        <IndexLink to={"details/" + props.user.title} activeClassName="active">View details</IndexLink>
+        <img src={props.user.thumbnail} title="" />
       </article>
   )
 }

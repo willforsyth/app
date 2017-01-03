@@ -15,13 +15,13 @@ class HomeContainer extends TrackerReact(React.Component) {
         ready: subscription.ready(),
         handle: Meteor.subscribe('sneakers'),
         subscription: subscription,
-        sneakers: ''
+        sneakers: []
       }
   }
 
-  componentWillUnmount() {
-      this.state.subscription.stop();
-  }
+  // componentWillUnmount() {
+  //     this.state.subscription.stop();
+  // }
 
   sneakers() {
       return this.state.sneakers;
@@ -32,6 +32,7 @@ class HomeContainer extends TrackerReact(React.Component) {
      const isReady = this.state.ready;
      if (this.state.handle.ready()){
        var item = sneakers.find().fetch();
+       console.log(item);
        this.setState({
           sneakers: item
       })
@@ -50,10 +51,10 @@ class HomeContainer extends TrackerReact(React.Component) {
   }
 
   render(){
-    // console.log(this.state.sneakers)
+    console.log(this.state.sneakers)
     return(
       <main className="cont grid">
-        {/* {this.renderItemsList()} */}
+        {this.renderItemsList()}
       </main>
     )
   }
