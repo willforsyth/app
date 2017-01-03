@@ -16,13 +16,9 @@ class ItemContainer extends Component {
         }
       }
   }
-
-  componentWillUnmount() {
-      this.state.subscription.item.stop();
-  }
-
+  // this needs to work similar to the home page
   item() {
-      return Meteor.users.find({"item.title": this.props.params.id}).fetch();
+      return sneakers.find({"title": this.props.params.id}).fetch();
   }
 
   renderItemsList() {
@@ -32,6 +28,7 @@ class ItemContainer extends Component {
   }
 
   render(){
+      console.log(sneakers.find({"title": this.props.params.id}).fetch());
       return (
         <div className="cont">
             {this.renderItemsList()}

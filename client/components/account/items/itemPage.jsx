@@ -8,6 +8,7 @@ const ItemPage = (props) => {
      </section>
    )
  }
+ console.log(props.user.item.title);
  return(
      <div>
          <section className="column column__center column__8-of-12">
