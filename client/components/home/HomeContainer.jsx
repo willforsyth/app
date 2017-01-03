@@ -10,33 +10,50 @@ class HomeContainer extends TrackerReact(React.Component) {
   // this is not being used/////
   constructor() {
       super();
+      const subscription = Meteor.subscribe('sneakers');
       this.state = {
-        subscription: {
-          items: Meteor.subscribe('allUsersItems')
-        }
+        ready: subscription.ready(),
+        handle: Meteor.subscribe('sneakers'),
+        subscription: subscription,
+        sneakers: ''
       }
   }
 
   componentWillUnmount() {
-      this.state.subscription.items.stop();
+      this.state.subscription.stop();
   }
+
+  sneakers() {
+      return this.state.sneakers;
+  }
+
+  componentDidMount() {
+   Tracker.autorun(() => {
+     const isReady = this.state.ready;
+     if (this.state.handle.ready()){
+       var item = sneakers.find().fetch();
+       this.setState({
+          sneakers: item
+      })
+     }else{
+       console.log("Its not ready did not mount");
+     }
+   });
+ }
   // this is not being used/////
 
-  item() {
-      return Meteor.users.find().fetch();
-  }
-
   renderItemsList() {
-      return this.item().map((user) => (
-        <HomePage key={user._id} user={user} />
+      console.log(this.state.sneakers)
+      return this.state.sneakers.map((sneaker) => (
+        <HomePage key={sneaker._id} user={sneaker} />
       ));
   }
 
   render(){
-    console.log(this.item().item);
+    // console.log(this.state.sneakers)
     return(
       <main className="cont grid">
-        {this.renderItemsList()}
+        {/* {this.renderItemsList()} */}
       </main>
     )
   }

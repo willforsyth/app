@@ -12,7 +12,7 @@ class ItemContainer extends Component {
       this.state = {
         data: Meteor.users.find().fetch(),
         subscription: {
-          item: Meteor.subscribe('allUsersItems')
+          item: Meteor.subscribe('sneakers')
         }
       }
   }

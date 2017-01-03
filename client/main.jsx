@@ -13,16 +13,28 @@ Session.set('userSession', Meteor.userId());
 
 // Meteor.subscribe('userData');
 
-items = new Mongo.Collection('items');
+sneakers = new Mongo.Collection('sneakers');
 
 Meteor.startup(() => {
   render(<Router history={browserHistory} routes={routes}/>, document.getElementById('render-target'));
 });
 
 
+const handle = Meteor.subscribe('sneakers');
+Tracker.autorun(() => {
+  const isReady = handle.ready();
+  if (isReady){
+    console.log("Its ready" + sneakers.find().fetch());
+    sneakers.find().fetch()
+  }else{
+    console.log("Its not ready" + sneakers.find().fetch());
+  }
+});
+
+
 Meteor.subscribe('userData');
 Meteor.subscribe('allUsersItems');
-Meteor.subscribe('items');
+Meteor.subscribe('sneakers');
 
 Template.body.events({
   	'submit .new-profile': function(event) {
@@ -75,7 +87,7 @@ Template.body.events({
 //   }
 // });
 
-Meteor.users.allow({
+sneakers.allow({
   update: function (userId, doc, fieldNames, modifier, user) {
          //similar checks like insert
          return true;

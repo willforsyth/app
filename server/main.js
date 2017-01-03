@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 
 import '../api/dataContainer';
 
-items = new Mongo.Collection('items');
+sneakers = new Mongo.Collection('sneakers');
 
 Meteor.startup(() => {
 
@@ -43,7 +43,8 @@ Meteor.methods({
     console.log(Meteor.users);
 
     /// this needs to be insert but wouldnt work needs investigating
-    items.insert({
+    sneakers.insert({
+        "user": Meteor.userId(),
         "title": make,
         "description": description,
         "category": size,
@@ -93,8 +94,8 @@ Meteor.publish('allUsersItems', function() {
   return Meteor.users.find({}, {fields: {'item': 1}});
 });
 
-Meteor.publish('items', function() {
-	return items.find();
+Meteor.publish('sneakers', function() {
+	return sneakers.find();
 });
 
 Slingshot.fileRestrictions("myFileUploads", {

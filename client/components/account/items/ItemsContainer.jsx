@@ -13,7 +13,7 @@ class ItemsContainer extends TrackerReact(React.Component) {
       super(props);
       this.state = {
         subscription: {
-          item: Meteor.subscribe('userData')
+          item: Meteor.subscribe('sneakers')
         }
       }
   }
@@ -22,18 +22,20 @@ class ItemsContainer extends TrackerReact(React.Component) {
       this.state.subscription.item.stop();
   }
   //// this is not being used/////
+  //// {"item.title": this.props.params.id}
 
   item() {
-      return Meteor.users.find({_id:Meteor.userId()}).fetch();
+      return sneakers.find({"user": Meteor.userId()}).fetch();
   }
 
   renderItemsList() {
-    return this.item().map((user) => (
-      <ItemsPage key={user._id} user={user} />
+    return this.item().map((sneaker) => (
+      <ItemsPage key={sneaker._id} sneaker={sneaker} />
     ));
   }
 
   render(){
+    console.log(sneakers.find({"user": Meteor.userId()}).fetch());
     return(
       <div className="cont">
         {this.renderItemsList()}
