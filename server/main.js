@@ -50,15 +50,8 @@ Meteor.methods({
         "category": size,
         "thumbnail": thumbnail
     });
+  },
 
-		// SubmittedForms.insert({
-		// 	"user_id": Meteor.userId(),
-		// 	"submittedDate": new Date(),
-		// 	"updateDate": new Date(),
-		// 	"state": "live",
-		// 	answers
-		// });
-  }
 
 });
 

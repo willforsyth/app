@@ -20,16 +20,16 @@ Meteor.startup(() => {
 });
 
 
-const handle = Meteor.subscribe('sneakers');
-Tracker.autorun(() => {
-  const isReady = handle.ready();
-  if (isReady){
-    console.log("Its ready" + sneakers.find().fetch());
-    sneakers.find().fetch()
-  }else{
-    console.log("Its not ready" + sneakers.find().fetch());
-  }
-});
+// const handle = Meteor.subscribe('sneakers');
+// Tracker.autorun(() => {
+//   const isReady = handle.ready();
+//   if (isReady){
+//     console.log("Its ready" + sneakers.find().fetch());
+//     sneakers.find().fetch()
+//   }else{
+//     console.log("Its not ready" + sneakers.find().fetch());
+//   }
+// });
 
 
 Meteor.subscribe('userData');
@@ -60,7 +60,7 @@ Template.body.events({
 
     console.log(make + description + size + thumbnail);
 
-    Meteor.call('addSneaker', make, description, size, thumbnail);
+    //
 
     let uploader = new Slingshot.Upload("myFileUploads");
 
@@ -71,7 +71,10 @@ Template.body.events({
         alert (error);
       }
       else {
-        Meteor.users.update(Meteor.userId(), {$push: {"profile.images": downloadUrl}});
+        console.log(downloadUrl);
+        // this will need to go somewhere else but works for the time being
+        Meteor.call('addSneaker', make, description, size, downloadUrl);
+        // sneakers.update(Meteor.userId(), {$set: {"thumbnail": downloadUrl}});
       }
     });
 
