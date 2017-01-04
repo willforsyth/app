@@ -2,12 +2,6 @@ import React from 'react';
 import {Link, IndexLink} from 'react-router';
 
 const HomePage = (props) => {
-    // if (props.sneaker === undefined) {
-    //   return(
-    //     <p></p>
-    //   )
-    // }
-    console.log(props.user.title)
   return(
       <article className="column column__3-of-12 item__thumbnail">
         <h2>{props.user.title}</h2>

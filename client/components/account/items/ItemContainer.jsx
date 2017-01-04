@@ -10,13 +10,15 @@ class ItemContainer extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        data: Meteor.users.find().fetch(),
+        data: sneakers.find({"title": this.props.params.id}).fetch(),
         subscription: {
           item: Meteor.subscribe('sneakers')
         }
       }
   }
   // this needs to work similar to the home page
+
+
   item() {
       return sneakers.find({"title": this.props.params.id}).fetch();
   }
@@ -28,7 +30,7 @@ class ItemContainer extends Component {
   }
 
   render(){
-      console.log(sneakers.find({"title": this.props.params.id}).fetch());
+      console.log(this.item());
       return (
         <div className="cont">
             {this.renderItemsList()}
