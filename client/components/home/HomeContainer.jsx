@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import {HomePage} from './HomePage';
 import { createContainer } from 'meteor/react-meteor-data';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
+import Radium from 'radium';
 
 // App component - represents the whole app
+
 class HomeContainer extends TrackerReact(React.Component) {
 
   // this is not being used/////
@@ -41,12 +43,13 @@ class HomeContainer extends TrackerReact(React.Component) {
      }
    });
  }
+
   // this is not being used/////
 
   renderItemsList() {
       console.log(this.state.sneakers)
       return this.state.sneakers.map((sneaker) => (
-        <HomePage key={sneaker._id} user={sneaker} />
+        <HomePage key={sneaker._id} user={sneaker} styles={styles} />
       ));
   }
 
@@ -60,4 +63,12 @@ class HomeContainer extends TrackerReact(React.Component) {
   }
 }
 
+const styles = {
+    backgroundColor: 'red',
+    ':hover': {
+       backgroundColor: 'blue'
+     }
+}
+
+HomeContainer = Radium(HomeContainer);
 export default HomeContainer;
