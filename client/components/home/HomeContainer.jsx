@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import {HomePage} from './HomePage';
+import {HomePageItem} from './HomePageItem';
 import { createContainer } from 'meteor/react-meteor-data';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 import Radium from 'radium';
 
 // App component - represents the whole app
 
+@Radium
 class HomeContainer extends TrackerReact(React.Component) {
 
   // this is not being used/////
@@ -47,28 +48,29 @@ class HomeContainer extends TrackerReact(React.Component) {
   // this is not being used/////
 
   renderItemsList() {
-      console.log(this.state.sneakers)
       return this.state.sneakers.map((sneaker) => (
-        <HomePage key={sneaker._id} user={sneaker} styles={styles} />
+        <HomePageItem key={sneaker._id} user={sneaker} styles={styles} />
       ));
   }
 
   render(){
-    console.log(this.state.sneakers)
     return(
-      <main className="cont grid">
-        {this.renderItemsList()}
-      </main>
+      <div>
+        <header className="home__banner">
+            <div className="wrapper">
+              <h1>Sell you rare sneakers</h1>
+            </div>
+        </header>
+        <main className="cont wrapper">
+          {this.renderItemsList()}
+        </main>
+      </div>
     )
   }
 }
 
 const styles = {
-    backgroundColor: 'red',
-    ':hover': {
-       backgroundColor: 'blue'
-     }
+
 }
 
-HomeContainer = Radium(HomeContainer);
 export default HomeContainer;

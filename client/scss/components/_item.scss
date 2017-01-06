@@ -1,0 +1,10 @@
+.item {
+  background-color: $color__gray;
+  color: $color__white;
+  margin-right: 1em;
+  padding: 0 !important;
+}
+
+.item__thumbnail {
+  border: 1px $color__black;
+}

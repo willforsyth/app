@@ -1,8 +1,17 @@
+.nav {
+  padding-bottom: 4em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+
 .nav--account {
-  float: right;
-  clear: both;
-  position: relative;
   z-index: 2;
+  right: 0;
+  width: auto;
+  top: 5em;
   a {
     margin-left: 1em;
     display: inline-block;
