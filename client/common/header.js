@@ -3,7 +3,7 @@ import {Link, IndexLink} from 'react-router';
 import AccountsUIWrapper from './../components/account/AccountsUIWrapper.jsx';
 import {AccountLink} from './accountLink';
 
-const Header = () => {
+const Header = (props) => {
    return (
      <header className="nav">
       <IndexLink to="/" activeClassName="active">Rarre</IndexLink>

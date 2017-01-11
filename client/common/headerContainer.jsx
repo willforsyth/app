@@ -5,29 +5,48 @@ import {AccountLink} from './accountLink';
 
 class HeaderContainer extends Component {
 
+  constructor() {
+      super();
+      const subscription = Meteor.subscribe('userData');
+      this.state = {
+        ready: subscription.ready(),
+        handle: Meteor.subscribe('userData'),
+        subscription: subscription,
+        user: []
+      }
+  }
+
+  componentDidMount() {
+   Tracker.autorun(() => {
+     const isReady = this.state.ready;
+     if (this.state.handle.ready()){
+       var user = Meteor.users.find({_id:Meteor.userId()}).fetch();
+       this.setState({
+          user: user
+      })
+     }else{
+       console.log("Its not ready did not mount");
+     }
+   });
+ }
+
   /// here we go again no data initially so no links
 
+  renderItemsList() {
+      return this.state.user.map((header) => (
+        <AccountLink key={header._id}/>
+      ));
+  }
+
   render(){
-    let userName = Meteor.users.find({_id:Meteor.userId()}).fetch();
-    if( Meteor.userId() ){
-      console.log('he' + Meteor.user())
-      return (
-          <div className="wrapper">
-              <Header />
-              <AccountLink />
-            </div>
-          );
-    }
-    else {
-      console.log('logged out')
+    console.log(this.state.user[0])
       return(
         <div className="wrapper">
           <Header />
+          {this.renderItemsList()}
         </div>
       )
     }
-
-  }
 }
 
 export {HeaderContainer};
