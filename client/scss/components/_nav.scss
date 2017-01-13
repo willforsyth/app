@@ -1,8 +1,5 @@
 .nav {
   padding-bottom: 4em;
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 100%;
 }
 
@@ -44,12 +41,12 @@
 }
 
 .nav-main {
+  z-index: 2;
   display: inline-block;
   float: right;
-  position: relative;
-  z-index: 2;
   a {
     margin-left: 1em;
+    display: inline-block;
     color: $color__white;
   }
 }

@@ -125,11 +125,16 @@ h4 {
 body {
   background: #1e2229;
   transition: all 0.6s;
+  color: #fff;
+}
+/* line 5, ../scss/base/_common.scss */
+body a {
+  color: #fff;
 }
 
-/* line 6, ../scss/base/_common.scss */
+/* line 10, ../scss/base/_common.scss */
 .wrapper {
-  max-width: 80em;
+  max-width: 50em;
   margin: auto;
 }
 
@@ -571,9 +576,6 @@ button {
 /* line 1, ../scss/components/_nav.scss */
 .nav {
   padding-bottom: 4em;
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 100%;
 }
 
@@ -585,19 +587,19 @@ button {
     transform: translateY(0);
   }
 }
-/* line 18, ../scss/components/_nav.scss */
+/* line 15, ../scss/components/_nav.scss */
 .nav--account--cont {
   background: #13849f;
 }
 
-/* line 22, ../scss/components/_nav.scss */
+/* line 19, ../scss/components/_nav.scss */
 .nav--account {
   padding: 1em 0;
   z-index: 2;
   right: 0;
   width: auto;
 }
-/* line 33, ../scss/components/_nav.scss */
+/* line 30, ../scss/components/_nav.scss */
 .nav--account a {
   margin-left: 1em;
   display: inline-block;
@@ -605,54 +607,46 @@ button {
   color: #fff;
 }
 
-/* line 41, ../scss/components/_nav.scss */
+/* line 38, ../scss/components/_nav.scss */
 .nav---height {
   height: auto;
   transition: height 0.4s ease-in-out;
 }
 
-/* line 46, ../scss/components/_nav.scss */
+/* line 43, ../scss/components/_nav.scss */
 .nav-main {
+  z-index: 2;
   display: inline-block;
   float: right;
-  position: relative;
-  z-index: 2;
 }
-/* line 51, ../scss/components/_nav.scss */
+/* line 47, ../scss/components/_nav.scss */
 .nav-main a {
   margin-left: 1em;
+  display: inline-block;
   color: #fff;
 }
 
-/* line 9, ../scss/components/_banners.scss */
-.home__banner {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 4em;
-  height: 40em;
-}
-/* line 14, ../scss/components/_banners.scss */
-.home__banner a {
-  position: relative;
-  z-index: 10;
+/* line 1, ../scss/components/_login.scss */
+.login-form {
+  width: 80%;
+  margin: auto;
+  padding: 2em;
 }
 
-/* line 20, ../scss/components/_banners.scss */
-.home__banner:before {
-  content: ' ';
-  display: block;
+/* line 6, ../scss/components/_login.scss */
+.accounts-dialog {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  width: 50%;
   height: 100%;
-  z-index: 0;
-  opacity: 0.4;
-  background: url(/images/splash.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  height: 35em;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* line 1, ../scss/components/_banners.scss */
+.home__banner {
+  padding: 8em 0;
 }
 
 /* line 1, ../scss/components/_item.scss */

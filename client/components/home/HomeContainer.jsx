@@ -58,10 +58,17 @@ class HomeContainer extends TrackerReact(React.Component) {
       <div>
         <header className="home__banner">
             <div className="wrapper">
-              <h1>Sell you rare sneakers</h1>
+              <h1>We are rarre</h1>
+              <p>---</p>
+              <p>Helping you buy and sell limited edition and rare items safely and amongst friends</p>
+              <ul>
+                <li>One of payment to sell</li>
+                <li>No % of purchases</li>
+                <li>Strict vetting</li>
+              </ul>
             </div>
         </header>
-        <main className="cont wrapper">
+        <main className="cont">
           {this.renderItemsList()}
         </main>
       </div>
