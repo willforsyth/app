@@ -3,6 +3,14 @@
   line-height: 1.6;
 }
 
+#login-sign-in-link{
+  visibility: hidden;
+}
+#login-sign-in-link:after{
+  visibility: visible;
+  content: 'Sign in';
+}
+
 .edit {
   position: absolute;
   top: 0;

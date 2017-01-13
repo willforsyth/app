@@ -3,6 +3,14 @@
   color: $color__white;
   margin-right: 1em;
   padding: 0 !important;
+  img {
+    filter: gray;
+    filter: grayscale(100%);
+  }
+  img:hover {
+    filter: none;
+    filter: grayscale(0%);
+  }
 }
 
 .item__thumbnail {

@@ -441,18 +441,29 @@ textarea {
 }
 
 /* line 6, ../scss/base/_shame.scss */
+#login-sign-in-link {
+  visibility: hidden;
+}
+
+/* line 9, ../scss/base/_shame.scss */
+#login-sign-in-link:after {
+  visibility: visible;
+  content: 'Sign in';
+}
+
+/* line 14, ../scss/base/_shame.scss */
 .edit {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-/* line 12, ../scss/base/_shame.scss */
+/* line 20, ../scss/base/_shame.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 16, ../scss/base/_shame.scss */
+/* line 24, ../scss/base/_shame.scss */
 img {
   width: 100%;
 }
@@ -620,7 +631,7 @@ button {
   float: right;
 }
 /* line 47, ../scss/components/_nav.scss */
-.nav-main a {
+.nav-main a, .nav-main span {
   margin-left: 1em;
   display: inline-block;
   color: #fff;
@@ -656,8 +667,18 @@ button {
   margin-right: 1em;
   padding: 0 !important;
 }
+/* line 6, ../scss/components/_item.scss */
+.item img {
+  filter: gray;
+  filter: grayscale(100%);
+}
+/* line 10, ../scss/components/_item.scss */
+.item img:hover {
+  filter: none;
+  filter: grayscale(0%);
+}
 
-/* line 8, ../scss/components/_item.scss */
+/* line 16, ../scss/components/_item.scss */
 .item__thumbnail {
   border: 1px #1e2229;
 }
