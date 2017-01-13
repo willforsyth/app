@@ -41,9 +41,13 @@ class HeaderContainer extends Component {
   render(){
     console.log(this.state.user[0])
       return(
-        <div className="wrapper">
-          <Header />
-          {this.renderItemsList()}
+        <div>
+           <div className="nav--account--cont">
+                {this.renderItemsList()}
+            </div>
+          <div className="wrapper">
+            <Header />
+          </div>
         </div>
       )
     }

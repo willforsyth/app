@@ -124,9 +124,10 @@ h4 {
 /* line 1, ../scss/base/_common.scss */
 body {
   background: #1e2229;
+  transition: all 0.6s;
 }
 
-/* line 5, ../scss/base/_common.scss */
+/* line 6, ../scss/base/_common.scss */
 .wrapper {
   max-width: 80em;
   margin: auto;
@@ -576,14 +577,27 @@ button {
   width: 100%;
 }
 
-/* line 10, ../scss/components/_nav.scss */
+@keyframes dropHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* line 18, ../scss/components/_nav.scss */
+.nav--account--cont {
+  background: #13849f;
+}
+
+/* line 22, ../scss/components/_nav.scss */
 .nav--account {
+  padding: 1em 0;
   z-index: 2;
   right: 0;
   width: auto;
-  top: 5em;
 }
-/* line 15, ../scss/components/_nav.scss */
+/* line 33, ../scss/components/_nav.scss */
 .nav--account a {
   margin-left: 1em;
   display: inline-block;
@@ -591,14 +605,20 @@ button {
   color: #fff;
 }
 
-/* line 23, ../scss/components/_nav.scss */
+/* line 41, ../scss/components/_nav.scss */
+.nav---height {
+  height: auto;
+  transition: height 0.4s ease-in-out;
+}
+
+/* line 46, ../scss/components/_nav.scss */
 .nav-main {
   display: inline-block;
   float: right;
   position: relative;
   z-index: 2;
 }
-/* line 28, ../scss/components/_nav.scss */
+/* line 51, ../scss/components/_nav.scss */
 .nav-main a {
   margin-left: 1em;
   color: #fff;
