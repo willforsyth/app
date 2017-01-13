@@ -13,6 +13,52 @@
 
 // Basic styles on inputs.
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $color__white inset;
+    color: rgb(255,255,255) !important;
+}
+
+.filter {
+  margin: 0 1% 1% 0;
+  text-align: center;
+  background-color: $color__gray;
+  overflow:auto;
+  float:left;
+  @extend .column__3-of-12;
+  &:hover {
+      background: $color__black;
+  }
+  label, span {
+      text-align:center;
+      display:block;
+  }
+  span {
+      padding: 1em;
+  }
+  input {
+      position:absolute;
+      top:-20px;
+  }
+    input:checked + span {
+      background-color:$color__black;
+      color:#fff;
+  }
+  &[disabled] + span{
+      background: $color__gray;
+      color: $color__white;
+      cursor: not-allowed;
+  }
+}
+
+.filter--cat {
+  background-color: $color__gray;
+  input:checked + span {
+      background-color:$color__blue;
+      color:#fff;
+  }
+}
+
+
 %input{
     font-size: 1em;
     display: block;
@@ -20,11 +66,14 @@
     border-left: 0;
     border-top: 0;
     border-right: 0;
-    border-bottom: 3px solid #ffffff;
+    border: 1px solid $color__black;
     background: none;
-    color: $color__pink;
+    color: $color__white;
+    padding: 1em;
+    margin: 1em 0;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
+    width: 100%;
 
     &:focus{
         border-color: $color__blue;
@@ -119,32 +168,32 @@ select{
   }
 }
 
-input[type="checkbox"],
-input[type="radio"]{
-    // display: none;
-
-    & ~ span {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        background-color: none;
-        border: 1px solid $color__white;
-        margin-right: $ratio--inv#{em};
-    }
-
-    & ~ label{
-        position: relative;
-        cursor: pointer;
-        padding-right: 4em;
-    }
-
-    &:checked{
-        & ~ span{
-            border: 1px solid $color__blue;
-            background: $color__blue;
-        }
-    }
-}
+// input[type="checkbox"],
+// input[type="radio"]{
+//     // display: none;
+//
+//     & ~ span {
+//         display: inline-block;
+//         width: 1em;
+//         height: 1em;
+//         background-color: none;
+//         border: 1px solid $color__white;
+//         margin-right: $ratio--inv#{em};
+//     }
+//
+//     & ~ label{
+//         position: relative;
+//         cursor: pointer;
+//         padding-right: 4em;
+//     }
+//
+//     &:checked{
+//         & ~ span{
+//             border: 1px solid $color__blue;
+//             background: $color__blue;
+//         }
+//     }
+// }
 
 input[type="radio"]{
     & ~ span{

@@ -68,6 +68,48 @@ class HomeContainer extends TrackerReact(React.Component) {
               </ul>
             </div>
         </header>
+        <div className="cont">
+          <nav>
+            <form>
+              <fieldset>
+              <div className="filter filter--cat">
+                <label className="filter__label">
+                  <input type="checkbox" checked="true" /><span>Sneakers</span>
+                </label>
+              </div>
+              <div className="filter">
+                <label className="filter__label">
+                  <input type="checkbox" disabled /><span>Urban prints</span>
+                </label>
+              </div>
+              <div className="filter">
+                <label className="filter__label">
+                  <input type="checkbox" disabled /><span>Vynl</span>
+                </label>
+              </div>
+              </fieldset>
+            </form>
+            <form>
+              <fieldset>
+                <div className="filter">
+                  <label className="filter__label">
+                    <input type="checkbox" /><span>Adidas</span>
+                  </label>
+                </div>
+                <div className="filter">
+                  <label className="filter__label">
+                    <input type="checkbox" disabled /><span>Nike</span>
+                  </label>
+                </div>
+                <div className="filter">
+                  <label className="filter__label">
+                    <input type="checkbox" disabled /><span>Puma</span>
+                  </label>
+                </div>
+                </fieldset>
+            </form>
+          </nav>
+        </div>
         <main className="cont">
           {this.renderItemsList()}
         </main>

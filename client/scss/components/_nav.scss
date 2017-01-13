@@ -1,5 +1,5 @@
 .nav {
-  padding-bottom: 4em;
+  padding: 2em 0;
   width: 100%;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .nav--account--cont {
-    background: $color__blue;
+    background: $color__gray;
 }
 
 .nav--account {
@@ -21,6 +21,7 @@
   z-index: 2;
   right: 0;
   width: auto;
+  @extend .clearfix;
   // animation-name: dropHeader;
   // animation-iteration-count: 1;
   // animation-timing-function: ease-out;
@@ -29,8 +30,8 @@
   // top: 0;
   a {
     margin-left: 1em;
-    display: inline-block;
-    clear: both;
+    display: block;
+    float: right;
     color: $color__white;
   }
 }

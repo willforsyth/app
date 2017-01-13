@@ -1,4 +1,4 @@
-%button {
+%button, .login-button {
     background-color: $color__blue;
     color: $color__white !important;
     border: 4px solid $color__blue;
@@ -26,7 +26,6 @@
     &:focus,
     &.zeroclipboard-is-hover {
         background: $color__blue;
-        border: pow($ratio--inv, 4)#{em} solid $color__blue;
         color: $color__white;
         fill: $color__white;
         outline: none;
@@ -64,7 +63,6 @@ button {
 
 %button--alt {
     @extend %button;
-    background-color: $color__pink !important;
     border: 3px solid $color__white;
     @extend .button--auto-width;
 }
